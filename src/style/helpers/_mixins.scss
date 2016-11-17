@@ -1,0 +1,16 @@
+@mixin text-overflow {
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  overflow:hidden;
+}
+
+@mixin clear-float{
+  display:table;
+  content:"";
+  clear:both;
+}
+
+@mixin font-size-0{
+  font-size: 0;
+  -webkit-text-size-adjust:none;
+}

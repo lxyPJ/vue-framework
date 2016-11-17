@@ -1,0 +1,97 @@
+@import "../helpers/mixins";
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #999;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #999;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #999;
+}
+
+.label{
+    display:inline-block;
+    vertical-align: top;
+    height:44px; line-height: 44px;
+    color:#999; text-align: right;
+    padding-right: 12px;
+}
+.inp{
+    display:block;
+    width:100%; height:44px;
+    line-height:20px;
+    font-size: 14px; color:#666;
+    @include text-overflow;
+    padding:12px;
+    background-color:#fff;
+    border:$border-color solid 1px; border-radius:4px;
+    margin-bottom: 6px;
+}
+
+//多行带标题的输入框
+.mul-inp-wrap{
+    display:table;
+    width: 100%;
+    .label-box,
+    .inp-box{
+        display:table-cell;
+        vertical-align: top;
+    }
+    .label-box{
+        @include font-size-0;
+        .label{
+            width: 100%;
+            border-bottom:1px solid $border-color;
+        }
+    }
+    .inp-box{
+        .inp{
+            width: 100%;
+            padding-left: 0;
+            border-left-width:0; border-right-width:0; border-top-width:0; border-radius:0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+//select
+.select{
+    display:block;
+    height:44px; line-height:44px;
+    font-size:14px; color:#666;
+    padding:0 12px;
+    background-color:#fff;
+    border:1px solid $border-color; border-radius:4px;
+    margin-bottom: 6px;
+}
+
+.textarea{
+    display:block;
+    width:100%; height:88px;
+    line-height:20px;
+    font-size: 14px; color:#666;
+    padding:12px;
+    background-color:#fff;
+    border:$border-color solid 1px; border-radius:4px;
+    margin-bottom: 6px;
+}
+
+//checkbox
+.checkbox-wrap{
+    .che{
+        display:inline-block;
+        vertical-align: top;
+        width:30px; line-height: 30px;
+        color:#666; text-align:center;
+    }
+    .check-text{
+        display:inline-block;
+        vertical-align: top;
+        line-height: 30px;
+        color:#999;
+    }
+}

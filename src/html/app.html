@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name = "format-detection" content = "telephone=no">
+    <title>vue-components</title>
+    <script src="../bundle/responsive.js"></script>
+    <link rel="stylesheet" href="../bundle/mint-ui.css">
+    <link rel="stylesheet" href="../style/app.css">
+</head>
+<body>
+    <div id="view" class="view">
+        <div class="pages">
+            <div class="page">
+                <div class="scroll-body">
+                    <!--轮播图-->
+                    <div class="banner-wrap">
+                        <mt-swipe :auto="4000">
+                            <mt-swipe-item>
+                                <img src="../style/images/1.jpg" alt="" width="100%" />
+                            </mt-swipe-item>
+                            <mt-swipe-item>
+                                <img src="../style/images/2.jpg" alt="" width="100%" />
+                            </mt-swipe-item>
+                            <mt-swipe-item>
+                                <img src="../style/images/3.jpg" alt="" width="100%" />
+                            </mt-swipe-item>
+                        </mt-swipe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../bundle/common.js"></script>
+<script src="../bundle/app.js"></script>
+</html>

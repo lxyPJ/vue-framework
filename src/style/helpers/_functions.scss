@@ -1,0 +1,3 @@
+@function px2rem($num){
+  @return $num/41.4 * 1rem;
+}
