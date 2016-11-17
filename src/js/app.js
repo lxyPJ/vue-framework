@@ -4,10 +4,13 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
 //mint-ui
-import MintUI from 'mint-ui';
 import 'mint-ui/lib/style.css';
 
-//swipe
+//标题
+import { Header } from 'mint-ui';
+Vue.component(Header.name, Header);
+
+//Swipe
 import { Swipe, SwipeItem } from 'mint-ui';
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);

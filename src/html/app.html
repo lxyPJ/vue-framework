@@ -8,13 +8,19 @@
     <script src="../bundle/responsive.js"></script>
     <link rel="stylesheet" href="../bundle/mint-ui.css">
     <link rel="stylesheet" href="../style/app.css">
+    <style>
+        .mint-header{
+            color:#666;
+            background-color:#efeff4;
+        }
+    </style>
 </head>
 <body>
     <div id="view" class="view">
         <div class="pages">
             <div class="page">
                 <div class="scroll-body">
-                    <!--轮播图-->
+                    <mt-header title="轮播图"></mt-header>
                     <div class="banner-wrap">
                         <mt-swipe :auto="4000">
                             <mt-swipe-item>
