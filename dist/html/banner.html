@@ -8,25 +8,26 @@
     <script src="../bundle/responsive.js"></script>
     <link rel="stylesheet" href="../bundle/mint-ui.css">
     <link rel="stylesheet" href="../style/app.css">
-    <style>
-        .page .scroll-body{
-            padding:10px;
-        }
-        .mint-button{
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
     <div id="view" class="view">
         <div class="pages">
             <div class="page">
                 <div class="scroll-body">
-                    <mt-button type="primary" v-on:click="goSwipe">轮播图</mt-button>
+                    <mt-header title="轮播图"></mt-header>
+                    <mt-swipe :auto="4000">
+                        <mt-swipe-item>
+                            <img src="../style/images/1.jpg" alt="" width="100%" />
+                        </mt-swipe-item>
+                        <mt-swipe-item>
+                            <img src="../style/images/2.jpg" alt="" width="100%" />
+                        </mt-swipe-item>
+                        <mt-swipe-item>
+                            <img src="../style/images/3.jpg" alt="" width="100%" />
+                        </mt-swipe-item>
+                    </mt-swipe>
                 </div>
             </div>
-            <router-view></router-view>
         </div>
     </div>
 </body>

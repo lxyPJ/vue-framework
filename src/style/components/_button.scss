@@ -1,30 +1,3 @@
-@import "./spinner";
-
-.btn{
-    display:inline-block;
-    vertical-align:top;
-    position: relative;
-    height: 44px; line-height: 44px;
-    font-size: 16px; color:#fff; text-align: center;
-    padding:0 12px;
-    background-color: $main-color;
-    border-radius:4px;
-    .button-loading{
-        position:absolute; top:0; left:0; z-index: 2;
-        width: 100%; height:100%;
-    }
-}
-.red-btn{
-    display:inline-block;
-    vertical-align:top;
-    position: relative;
-    height: 44px; line-height: 44px;
-    font-size: 16px; color:#fff; text-align: center;
-    padding:0 12px;
-    background-color:$red-color;
-    border-radius:4px;
-    .button-loading{
-        position:absolute; top:0; left:0; z-index: 2;
-        width: 100%; height:100%;
-    }
+.mint-button{
+  vertical-align: top;
 }

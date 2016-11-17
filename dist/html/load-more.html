@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name = "format-detection" content = "telephone=no">
-    <title>vue-components</title>
+    <title>下拉刷新与无限滚动</title>
     <script src="../bundle/responsive.js"></script>
     <link rel="stylesheet" href="../bundle/mint-ui.css">
     <link rel="stylesheet" href="../style/app.css">
-    <style>
-        .page .scroll-body{
-            padding:10px;
-        }
-        .mint-button{
-            width: 100%;
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 <body>
     <div id="view" class="view">
         <div class="pages">
             <div class="page">
                 <div class="scroll-body">
-                    <mt-button type="primary" v-on:click="goSwipe">轮播图</mt-button>
+                    <mt-header title="load-more"></mt-header>
                 </div>
             </div>
-            <router-view></router-view>
         </div>
     </div>
 </body>
 <script src="../bundle/common.js"></script>
-<script src="../bundle/app.js"></script>
+<script>
+    require('babel-polyfill');
+    import Vue from "vue";
+    //mint-ui
+    import 'mint-ui/lib/style.css';
+
+    //标题
+    import { Header } from 'mint-ui';
+    Vue.component(Header.name, Header);
+
+
+
+    const app = new Vue({
+
+    }).$mount("#view");
+
+</script>
 </html>
