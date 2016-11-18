@@ -19,10 +19,11 @@
 
 <script>
     import Vue from "vue";
-    import { Swipe, SwipeItem, Header } from 'mint-ui';
+    import { Swipe, SwipeItem, Header, Button } from 'mint-ui';
     Vue.component(Swipe.name, Swipe);
     Vue.component(SwipeItem.name, SwipeItem);
     Vue.component(Header.name, Header);
+    Vue.component(Button.name, Button);
 
     export default{
         data:function(){

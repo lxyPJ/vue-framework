@@ -4,8 +4,10 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
 //组件
-import {Button} from "mint-ui";
-Vue.component(Button.name,Button);
+import solidBtn from "./components/common/solid-button.vue";
+Vue.component('solid-button',solidBtn);
+import pageLoading from "./components/common/page-loading.vue";
+Vue.component('page-loading',pageLoading);
 const swipe = resolve => {
     require.ensure([],() => {
         resolve(require('./example/swipe.vue'));
@@ -23,5 +25,16 @@ const router = new VueRouter({
 });
 
 const app = new Vue({
-    router
+    router,
+    data:{
+        loading:false
+    }
 }).$mount("#view");
+
+router.beforeEach((to,from,next) => {
+
+    next();
+});
+router.afterEach(router => {
+
+});

@@ -15,6 +15,9 @@
             width: 100%;
             margin-bottom: 10px;
         }
+        .page .btn-wrap{
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -23,11 +26,16 @@
             <div class="page">
                 <div class="scroll-body">
                     <router-link to="swipe">
-                        <mt-button type="primary">轮播图</mt-button>
+                        <solid-button text="轮播图"></solid-button>
                     </router-link>
                 </div>
             </div>
-            <router-view></router-view>
+            <transition name="slide">
+                <keep-alive>
+                    <router-view></router-view>
+                </keep-alive>
+            </transition>
+            <page-loading v-if="loading"></page-loading>
         </div>
     </div>
 </body>
