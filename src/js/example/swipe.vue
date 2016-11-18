@@ -1,6 +1,11 @@
-<template>
+﻿?<template>
     <div class="sub-page">
         <div class="scroll-body">
+            <mt-header title="轮播图">
+                <router-link to="/" slot="left">
+                    <mt-button icon="back">返回</mt-button>
+                </router-link>
+            </mt-header>
             <mt-swipe :auto="4000">
                 <template v-for="url of urls">
                     <mt-swipe-item>
@@ -14,9 +19,10 @@
 
 <script>
     import Vue from "vue";
-    import { Swipe, SwipeItem } from 'mint-ui';
+    import { Swipe, SwipeItem, Header } from 'mint-ui';
     Vue.component(Swipe.name, Swipe);
     Vue.component(SwipeItem.name, SwipeItem);
+    Vue.component(Header.name, Header);
 
     export default{
         data:function(){

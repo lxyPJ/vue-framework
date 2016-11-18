@@ -1,3 +1,22 @@
+.router-link-active{
+  display:block;
+}
 .mint-button{
   vertical-align: top;
+  height: 44px !important;
+  @include font-size-0;
+  .mint-button-icon{
+    vertical-align: top;
+    line-height: 44px;
+    .mintui-back{
+      display:block;
+      font-size:20px; font-weight:500;
+    }
+  }
+  .mint-button-text{
+    display:inline-block;
+    vertical-align: top;
+    line-height: 44px;
+    font-size:16px; font-weight:500;
+  }
 }

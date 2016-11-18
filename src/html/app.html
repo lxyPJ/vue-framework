@@ -6,13 +6,12 @@
     <meta name = "format-detection" content = "telephone=no">
     <title>vue-components</title>
     <script src="../bundle/responsive.js"></script>
-    <link rel="stylesheet" href="../bundle/mint-ui.css">
     <link rel="stylesheet" href="../style/app.css">
     <style>
         .page .scroll-body{
             padding:10px;
         }
-        .mint-button{
+        .page .mint-button{
             width: 100%;
             margin-bottom: 10px;
         }
@@ -23,7 +22,9 @@
         <div class="pages">
             <div class="page">
                 <div class="scroll-body">
-                    <mt-button type="primary" v-on:click="goSwipe">轮播图</mt-button>
+                    <router-link to="swipe">
+                        <mt-button type="primary">轮播图</mt-button>
+                    </router-link>
                 </div>
             </div>
             <router-view></router-view>

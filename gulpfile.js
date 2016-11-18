@@ -85,13 +85,13 @@ function watcher() {
     gulp.watch("src/html/**/*.html",html);
     gulp.watch("dist/html/**/*.html").on("change",bs.reload);
     gulp.watch("src/style/**/*.scss", style);
-    gulp.watch('dist/js/*.js').on("change",bs.reload);
+    gulp.watch('dist/bundle/*.*').on("change",bs.reload);
 }
 
 //browserSync
 function server(){
     bs.init({
-        proxy: "192.168.3.5"
+        proxy: "192.168.1.133"
     });
     watcher();
 }

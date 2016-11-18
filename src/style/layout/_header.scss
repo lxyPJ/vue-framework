@@ -1,3 +1,9 @@
 .mint-header{
-  height:44px;
+  height: 44px !important;
+  .mint-header-title{
+    font-size:18px; font-weight:500;
+  }
+  .mint-button-text{
+    font-size: 14px;
+  }
 }

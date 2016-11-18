@@ -1,7 +1,5 @@
 require('babel-polyfill');
 import Vue from "vue";
-//mint-ui
-import 'mint-ui/lib/style.css';
 //路由
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
@@ -25,10 +23,5 @@ const router = new VueRouter({
 });
 
 const app = new Vue({
-    router,
-    methods:{
-        goSwipe(){
-            window.location.hash = "swipe";
-        }
-    }
+    router
 }).$mount("#view");
