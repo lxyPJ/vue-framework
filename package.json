@@ -29,6 +29,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.2.0",
     "gulp-util": "^3.0.7",
+    "mockjs": "^1.0.1-beta3",
     "node-sass": "^3.13.0",
     "path": "^0.12.7",
     "style-loader": "^0.13.1",

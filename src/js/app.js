@@ -1,5 +1,7 @@
 require('babel-polyfill');
 import Vue from "vue";
+//状态容器
+import store from "./store";
 //路由
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
@@ -13,11 +15,20 @@ const swipe = resolve => {
         resolve(require('./example/swipe.vue'));
     })
 };
+const loadMore = resolve => {
+    require.ensure([],() => {
+        resolve(require('./example/load-more.vue'));
+    })
+};
 //定义路由
 const routes = [
     {
         path:'/swipe',
         component:swipe
+    },
+    {
+        path:'/loadMore',
+        component:loadMore
     }
 ];
 const router = new VueRouter({
@@ -26,15 +37,17 @@ const router = new VueRouter({
 
 const app = new Vue({
     router,
-    data:{
-        loading:false
-    }
+    store
 }).$mount("#view");
 
 router.beforeEach((to,from,next) => {
-
+    store.commit('pageLoading',{
+        pageLoading:true
+    });
     next();
 });
 router.afterEach(router => {
-
+    store.commit('pageLoading',{
+        pageLoading:false
+    });
 });

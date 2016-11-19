@@ -1,5 +1,5 @@
 <template>
-    <div class="page-loading-wrap">
+    <div class="page-loading-wrap" v-if="loading">
         <div class="page-loading">
             <div class="spinner">
                 <div class="spinner-container container1">
@@ -27,6 +27,10 @@
 
 <script>
     export default{
-
+        computed:{
+            loading:function(){
+                return this.$store.state.pageLoading;
+            }
+        }
     }
 </script>
