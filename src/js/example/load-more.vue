@@ -1,14 +1,26 @@
-﻿?<template>
+﻿<style>
+    .sub-page{
+        overflow: hidden !important;
+    }
+    .item{
+        width: 100%; line-height:40px;
+        font-size:16px; color:#333; text-align:center;
+        background-color: #efeff4;
+        border-bottom:1px solid #e8e8e8;
+    }
+</style>
+
+<template>
     <div class="sub-page">
-        <div class="scroll-body">
-            <mt-header title="加载更多">
-                <router-link to="/" slot="left">
-                    <mt-button icon="back">返回</mt-button>
-                </router-link>
-            </mt-header>
-            <mt-loadmore ref="loadmore" :top-method="loadTop">
+        <mt-header title="下拉刷新与上拉加载">
+            <router-link to="/" slot="left">
+                <mt-button icon="back">返回</mt-button>
+            </router-link>
+        </mt-header>
+        <div class="mt-scroll-body">
+            <mt-loadmore ref="loadmore" :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded">
                 <div>
-                    <p :style="style" v-for="item of items">{{item.name}}</p>
+                    <p class="item" v-for="item of items">{{item.name}}</p>
                 </div>
             </mt-loadmore>
         </div>
@@ -27,49 +39,46 @@
         data:function(){
             return {
                 items:[],
-                style:{
-                    textAlign:'center'
-                }
+                recordNo:0
             }
         },
         methods:{
             loadTop:function(id){
-                var data = Mock.mock({
-                    "array|5-10": [
-                        {
-                            "name|+1": [
-                                "福州",
-                                "泉州",
-                                "厦门",
-                                "北京",
-                                "上海",
-                                "杭州",
-                                "深圳"
+                var self = this;
+                setTimeout(function(){
+                    var items = [];
+                    Mock.Random.city(true);
+                    for(let i=0; i<self.recordNo; i++){
+                        var data = Mock.mock({
+                            array: [
+                                {
+                                    "name":'@city'
+                                }
                             ]
-                        }
-                    ]
-                });
-                this.items = data.array
-                this.$refs.loadmore.onTopLoaded(id);
-            }
-        },
-        created:function(){
-            var data = Mock.mock({
-                "array|5-10": [
-                    {
-                        "name|+1": [
-                            "福州",
-                            "泉州",
-                            "厦门",
-                            "北京",
-                            "上海",
-                            "杭州",
-                            "深圳"
-                        ]
+                        });
+                        items = items.concat(data.array);
                     }
-                ]
-            });
-            this.items = data.array;
+                    self.items = items;
+                    self.recordNo = items.length;
+                    self.$refs.loadmore.onTopLoaded(id);
+                },1000);
+            },
+            loadBottom:function(id){
+                var self = this;
+                setTimeout(function(){
+                    Mock.Random.city(true);
+                    var data = Mock.mock({
+                        "array|5": [
+                            {
+                                "name":'@city'
+                            }
+                        ]
+                    });
+                    self.items = self.items.concat(data.array);
+                    self.recordNo += 5;
+                    self.$refs.loadmore.onBottomLoaded(id);
+                },1000);
+            }
         }
     }
 </script>

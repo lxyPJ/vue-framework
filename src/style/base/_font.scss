@@ -1,14 +1,16 @@
 @import "../helpers/_mixins";
 
-h1,h2,h3,h4,h5,h6,
-strong,p,span,i{
-    line-height:1.5;
-}
-strong,p,span,i{
-    display:block;
-}
 h1{
-    font-size:36px;
+    font-size:26px;
+}
+h2{
+    font-size:24px;
+}
+h3{
+    font-size:22px;
+}
+h4{
+    font-size:20px;
 }
 h5{
     font-size:18px;
@@ -25,7 +27,7 @@ span{
 h1,h2,h3,h4,h5,h6{
     color:#333;
 }
-p,strong{
+p{
     color:#666;
 }
 span{
@@ -36,15 +38,4 @@ i{
 }
 h5,h6{
     font-weight:normal;
-}
-.default-img{
-    display:table;
-    width: 100%; height:100%;
-    background-color:#efeff4;
-}
-.default-img-icon{
-    display:table-cell;
-    vertical-align: middle;
-    line-height: 1;
-    font-size:40px !important; color:#666; text-align:center;
 }

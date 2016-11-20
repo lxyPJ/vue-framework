@@ -17,6 +17,11 @@
             .scroll-body{
                 min-height:100%;
             }
+            .mt-scroll-body{
+                position: absolute; top:44px; bottom:0; left:0; right:0;
+                overflow-y: auto; overflow-x:hidden;
+                -webkit-overflow-scrolling: touch;
+            }
         }
         .page{
             bottom:48px; z-index:1;

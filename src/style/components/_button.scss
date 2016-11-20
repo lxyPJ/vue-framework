@@ -15,7 +15,6 @@
   padding:0 12px;
 }
 .btn-hover{
-  //background-color:$main-hover-color;
   opacity:0.9;
 }
 .btn-loading{
@@ -37,7 +36,7 @@
     line-height: 44px;
     .mintui-back{
       display:block;
-      font-size:24px; font-weight:800;
+      font-size:24px; color:#fff; font-weight:800;
     }
   }
   .mint-button-text{
