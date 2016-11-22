@@ -48,6 +48,11 @@ webpackJsonp([0],{
 	        resolve(__webpack_require__(396));
 	    });
 	};
+	var infinite = function infinite(resolve) {
+	    __webpack_require__.e/* nsure */(3, function () {
+	        resolve(__webpack_require__(406));
+	    });
+	};
 	//定义路由
 	var routes = [{
 	    path: '/swipe',
@@ -55,6 +60,9 @@ webpackJsonp([0],{
 	}, {
 	    path: '/loadMore',
 	    component: loadMore
+	}, {
+	    path: '/infinite',
+	    component: infinite
 	}];
 	var router = new _vueRouter2.default({
 	    routes: routes
@@ -99,7 +107,6 @@ webpackJsonp([0],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	_vue2.default.use(_vuex2.default);
-	
 	exports.default = new _vuex2.default.Store({
 	    state: {
 	        pageLoading: false

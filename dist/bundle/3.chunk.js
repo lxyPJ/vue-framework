@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([3],{
 
 /***/ 379:
 /***/ function(module, exports, __webpack_require__) {
@@ -897,96 +897,6 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 396:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_exports__, __vue_options__
-	var __vue_styles__ = {}
-	
-	/* styles */
-	__webpack_require__(397)
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(400)
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(405)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	__vue_options__.__file = "D:\\code\\php\\htdocs\\vue-comp\\vue-comp\\src\\js\\example\\load-more.vue"
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	
-	/* hot reload */
-	if (false) {(function () {
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  module.hot.accept()
-	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-f5c2e30e", __vue_options__)
-	  } else {
-	    hotAPI.reload("data-v-f5c2e30e", __vue_options__)
-	  }
-	})()}
-	if (__vue_options__.functional) {console.error("[vue-loader] load-more.vue: functional components are not supported and should be defined in plain js files using render functions.")}
-	
-	module.exports = __vue_exports__
-
-
-/***/ },
-
-/***/ 397:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(398);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(399)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-f5c2e30e!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./load-more.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-f5c2e30e!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./load-more.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 398:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(381)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\n.sub-page{\n    overflow: hidden !important;\n}\n.item{\n    width: 100%; line-height:40px;\n    font-size:16px; color:#333; text-align:center;\n    background-color: #efeff4;\n    border-bottom:1px solid #e8e8e8;\n}\n", "", {"version":3,"sources":["/./src/js/example/load-more.vue?36fb839f"],"names":[],"mappings":";AACA;IACA,4BAAA;CACA;AACA;IACA,YAAA,CAAA,iBAAA;IACA,eAAA,CAAA,WAAA,CAAA,kBAAA;IACA,0BAAA;IACA,gCAAA;CACA","file":"load-more.vue","sourcesContent":["<style>\r\n    .sub-page{\r\n        overflow: hidden !important;\r\n    }\r\n    .item{\r\n        width: 100%; line-height:40px;\r\n        font-size:16px; color:#333; text-align:center;\r\n        background-color: #efeff4;\r\n        border-bottom:1px solid #e8e8e8;\r\n    }\r\n</style>\r\n\r\n<template>\r\n    <div class=\"sub-page\">\r\n        <mt-header title=\"加载更多\">\r\n            <router-link to=\"/\" slot=\"left\">\r\n                <mt-button icon=\"back\">返回</mt-button>\r\n            </router-link>\r\n        </mt-header>\r\n        <div class=\"mt-scroll-body\">\r\n            <mt-loadmore ref=\"loadmore\" :top-method=\"loadTop\" :bottom-method=\"loadBottom\" :bottom-all-loaded=\"allLoaded\">\r\n                <div>\r\n                    <p class=\"item\" v-for=\"item of items\">{{item.name}}</p>\r\n                </div>\r\n            </mt-loadmore>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n    import Mock from \"mockjs\";\r\n    import Vue from \"vue\";\r\n    import { Loadmore, Header, Button } from 'mint-ui';\r\n    Vue.component(Loadmore.name, Loadmore);\r\n    Vue.component(Header.name, Header);\r\n    Vue.component(Button.name, Button);\r\n\r\n    export default{\r\n        data:function(){\r\n            return {\r\n                items:[],\r\n                recordNo:0,\r\n                allLoaded:false\r\n            }\r\n        },\r\n        methods:{\r\n            loadTop:function(id){\r\n                var self = this;\r\n                setTimeout(function(){\r\n                    var items = [];\r\n                    Mock.Random.city(true);\r\n                    for(let i=0; i<self.recordNo; i++){\r\n                        var data = Mock.mock({\r\n                            array: [\r\n                                {\r\n                                    \"name\":'@city'\r\n                                }\r\n                            ]\r\n                        });\r\n                        items = items.concat(data.array);\r\n                    }\r\n                    self.items = items;\r\n                    self.recordNo = items.length;\r\n                    self.$refs.loadmore.onTopLoaded(id);\r\n                },1000);\r\n            },\r\n            loadBottom:function(id){\r\n                var self = this;\r\n                setTimeout(function(){\r\n                    Mock.Random.city(true);\r\n                    var data = Mock.mock({\r\n                        \"array|5\": [\r\n                            {\r\n                                \"name\":'@city'\r\n                            }\r\n                        ]\r\n                    });\r\n                    if(self.recordNo < 35){\r\n                        self.items = self.items.concat(data.array);\r\n                        self.recordNo += 5;\r\n                    }else{\r\n                        self.allLoaded = true;//若数据已全部获取完毕\r\n                    }\r\n                    self.$refs.loadmore.onBottomLoaded(id);\r\n                },1000);\r\n            }\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
-	
-	// exports
-
-
-/***/ },
-
 /***/ 399:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1207,876 +1117,6 @@ webpackJsonp([2],{
 		}
 	}
 
-
-/***/ },
-
-/***/ 400:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _style = __webpack_require__(379);
-	
-	var _style2 = _interopRequireDefault(_style);
-	
-	var _button = __webpack_require__(383);
-	
-	var _button2 = _interopRequireDefault(_button);
-	
-	var _style3 = __webpack_require__(386);
-	
-	var _style4 = _interopRequireDefault(_style3);
-	
-	var _header = __webpack_require__(388);
-	
-	var _header2 = _interopRequireDefault(_header);
-	
-	var _style5 = __webpack_require__(401);
-	
-	var _style6 = _interopRequireDefault(_style5);
-	
-	var _loadmore = __webpack_require__(403);
-	
-	var _loadmore2 = _interopRequireDefault(_loadmore);
-	
-	var _mockjs = __webpack_require__(404);
-	
-	var _mockjs2 = _interopRequireDefault(_mockjs);
-	
-	var _vue = __webpack_require__(1);
-	
-	var _vue2 = _interopRequireDefault(_vue);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	
-	_vue2.default.component(_loadmore2.default.name, _loadmore2.default);
-	_vue2.default.component(_header2.default.name, _header2.default);
-	_vue2.default.component(_button2.default.name, _button2.default);
-	
-	exports.default = {
-	    data: function data() {
-	        return {
-	            items: [],
-	            recordNo: 0,
-	            allLoaded: false
-	        };
-	    },
-	    methods: {
-	        loadTop: function loadTop(id) {
-	            var self = this;
-	            setTimeout(function () {
-	                var items = [];
-	                _mockjs2.default.Random.city(true);
-	                for (var i = 0; i < self.recordNo; i++) {
-	                    var data = _mockjs2.default.mock({
-	                        array: [{
-	                            "name": '@city'
-	                        }]
-	                    });
-	                    items = items.concat(data.array);
-	                }
-	                self.items = items;
-	                self.recordNo = items.length;
-	                self.$refs.loadmore.onTopLoaded(id);
-	            }, 1000);
-	        },
-	        loadBottom: function loadBottom(id) {
-	            var self = this;
-	            setTimeout(function () {
-	                _mockjs2.default.Random.city(true);
-	                var data = _mockjs2.default.mock({
-	                    "array|5": [{
-	                        "name": '@city'
-	                    }]
-	                });
-	                if (self.recordNo < 35) {
-	                    self.items = self.items.concat(data.array);
-	                    self.recordNo += 5;
-	                } else {
-	                    self.allLoaded = true; //若数据已全部获取完毕
-	                }
-	                self.$refs.loadmore.onBottomLoaded(id);
-	            }, 1000);
-	        }
-	    }
-	};
-
-/***/ },
-
-/***/ 401:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(402);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(382)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./../../../css-loader/index.js!./style.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 402:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(381)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\n.mint-loadmore {\n    overflow: hidden\n}\n.mint-loadmore-content {}\n.mint-loadmore-content.is-dropped {\n    -webkit-transition: .2s;\n    transition: .2s\n}\n.mint-loadmore-top, .mint-loadmore-bottom {\n    text-align: center;\n    height: 50px;\n    line-height: 50px\n}\n.mint-loadmore-top {\n    margin-top: -50px\n}\n.mint-loadmore-bottom {\n    margin-bottom: -50px\n}\n.mint-loadmore-spinner {\n    display: inline-block;\n    margin-right: 5px;\n    vertical-align: middle\n}\n.mint-loadmore-text {\n    vertical-align: middle\n}\n\n.mint-spinner-fading-circle {\n    position: relative\n}\n.mint-spinner-fading-circle-circle {\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    position: absolute\n}\n.mint-spinner-fading-circle-circle::before {\n    content: \" \";\n    display: block;\n    margin: 0 auto;\n    width: 15%;\n    height: 15%;\n    border-radius: 100%;\n    -webkit-animation: mint-fading-circle 1.2s infinite ease-in-out both;\n            animation: mint-fading-circle 1.2s infinite ease-in-out both\n}\n.mint-spinner-fading-circle-circle.is-circle2 {\n    -webkit-transform: rotate(30deg);\n            transform: rotate(30deg)\n}\n.mint-spinner-fading-circle-circle.is-circle2::before {\n    -webkit-animation-delay: -1.1s;\n            animation-delay: -1.1s\n}\n.mint-spinner-fading-circle-circle.is-circle3 {\n    -webkit-transform: rotate(60deg);\n            transform: rotate(60deg)\n}\n.mint-spinner-fading-circle-circle.is-circle3::before {\n    -webkit-animation-delay: -1s;\n            animation-delay: -1s\n}\n.mint-spinner-fading-circle-circle.is-circle4 {\n    -webkit-transform: rotate(90deg);\n            transform: rotate(90deg)\n}\n.mint-spinner-fading-circle-circle.is-circle4::before {\n    -webkit-animation-delay: -0.9s;\n            animation-delay: -0.9s\n}\n.mint-spinner-fading-circle-circle.is-circle5 {\n    -webkit-transform: rotate(120deg);\n            transform: rotate(120deg)\n}\n.mint-spinner-fading-circle-circle.is-circle5::before {\n    -webkit-animation-delay: -0.8s;\n            animation-delay: -0.8s\n}\n.mint-spinner-fading-circle-circle.is-circle6 {\n    -webkit-transform: rotate(150deg);\n            transform: rotate(150deg)\n}\n.mint-spinner-fading-circle-circle.is-circle6::before {\n    -webkit-animation-delay: -0.7s;\n            animation-delay: -0.7s\n}\n.mint-spinner-fading-circle-circle.is-circle7 {\n    -webkit-transform: rotate(180deg);\n            transform: rotate(180deg)\n}\n.mint-spinner-fading-circle-circle.is-circle7::before {\n    -webkit-animation-delay: -0.6s;\n            animation-delay: -0.6s\n}\n.mint-spinner-fading-circle-circle.is-circle8 {\n    -webkit-transform: rotate(210deg);\n            transform: rotate(210deg)\n}\n.mint-spinner-fading-circle-circle.is-circle8::before {\n    -webkit-animation-delay: -0.5s;\n            animation-delay: -0.5s\n}\n.mint-spinner-fading-circle-circle.is-circle9 {\n    -webkit-transform: rotate(240deg);\n            transform: rotate(240deg)\n}\n.mint-spinner-fading-circle-circle.is-circle9::before {\n    -webkit-animation-delay: -0.4s;\n            animation-delay: -0.4s\n}\n.mint-spinner-fading-circle-circle.is-circle10 {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg)\n}\n.mint-spinner-fading-circle-circle.is-circle10::before {\n    -webkit-animation-delay: -0.3s;\n            animation-delay: -0.3s\n}\n.mint-spinner-fading-circle-circle.is-circle11 {\n    -webkit-transform: rotate(300deg);\n            transform: rotate(300deg)\n}\n.mint-spinner-fading-circle-circle.is-circle11::before {\n    -webkit-animation-delay: -0.2s;\n            animation-delay: -0.2s\n}\n.mint-spinner-fading-circle-circle.is-circle12 {\n    -webkit-transform: rotate(330deg);\n            transform: rotate(330deg)\n}\n.mint-spinner-fading-circle-circle.is-circle12::before {\n    -webkit-animation-delay: -0.1s;\n            animation-delay: -0.1s\n}\n@-webkit-keyframes mint-fading-circle {\n    0%, 39%, 100% {\n        opacity: 0\n    }\n    40% {\n        opacity: 1\n    }\n}\n@keyframes mint-fading-circle {\n    0%, 39%, 100% {\n        opacity: 0\n    }\n    40% {\n        opacity: 1\n    }\n}\n", ""]);
-	
-	// exports
-
-
-/***/ },
-
-/***/ 403:
-/***/ function(module, exports) {
-
-	module.exports =
-	/******/ (function(modules) { // webpackBootstrap
-	/******/ 	// The module cache
-	/******/ 	var installedModules = {};
-	
-	/******/ 	// The require function
-	/******/ 	function __webpack_require__(moduleId) {
-	
-	/******/ 		// Check if module is in cache
-	/******/ 		if(installedModules[moduleId])
-	/******/ 			return installedModules[moduleId].exports;
-	
-	/******/ 		// Create a new module (and put it into the cache)
-	/******/ 		var module = installedModules[moduleId] = {
-	/******/ 			i: moduleId,
-	/******/ 			l: false,
-	/******/ 			exports: {}
-	/******/ 		};
-	
-	/******/ 		// Execute the module function
-	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-	
-	/******/ 		// Flag the module as loaded
-	/******/ 		module.l = true;
-	
-	/******/ 		// Return the exports of the module
-	/******/ 		return module.exports;
-	/******/ 	}
-	
-	
-	/******/ 	// expose the modules object (__webpack_modules__)
-	/******/ 	__webpack_require__.m = modules;
-	
-	/******/ 	// expose the module cache
-	/******/ 	__webpack_require__.c = installedModules;
-	
-	/******/ 	// identity function for calling harmory imports with the correct context
-	/******/ 	__webpack_require__.i = function(value) { return value; };
-	
-	/******/ 	// define getter function for harmory exports
-	/******/ 	__webpack_require__.d = function(exports, name, getter) {
-	/******/ 		Object.defineProperty(exports, name, {
-	/******/ 			configurable: false,
-	/******/ 			enumerable: true,
-	/******/ 			get: getter
-	/******/ 		});
-	/******/ 	};
-	
-	/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-	/******/ 	__webpack_require__.n = function(module) {
-	/******/ 		var getter = module && module.__esModule ?
-	/******/ 			function getDefault() { return module['default']; } :
-	/******/ 			function getModuleExports() { return module; };
-	/******/ 		__webpack_require__.d(getter, 'a', getter);
-	/******/ 		return getter;
-	/******/ 	};
-	
-	/******/ 	// Object.prototype.hasOwnProperty.call
-	/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-	
-	/******/ 	// __webpack_public_path__
-	/******/ 	__webpack_require__.p = "";
-	
-	/******/ 	// Load entry module and return exports
-	/******/ 	return __webpack_require__(__webpack_require__.s = 222);
-	/******/ })
-	/************************************************************************/
-	/******/ ({
-	
-	/***/ 105:
-	/***/ function(module, exports) {
-	
-	// removed by extract-text-webpack-plugin
-	
-	/***/ },
-	
-	/***/ 11:
-	/***/ function(module, exports) {
-	
-	// removed by extract-text-webpack-plugin
-	
-	/***/ },
-	
-	/***/ 12:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	var __vue_exports__, __vue_options__
-	
-	/* styles */
-	__webpack_require__(11)
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(8)
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(13)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	
-	module.exports = __vue_exports__
-	
-	
-	/***/ },
-	
-	/***/ 13:
-	/***/ function(module, exports) {
-	
-	module.exports={render:function (){with(this) {
-	  return _h('div', {
-	    class: ['mint-spinner-fading-circle circle-color-' + _uid],
-	    style: ({
-	      width: spinnerSize,
-	      height: spinnerSize
-	    })
-	  }, [_l((12), function(n) {
-	    return _h('div', {
-	      staticClass: "mint-spinner-fading-circle-circle",
-	      class: ['is-circle' + (n + 1)]
-	    })
-	  })])
-	}},staticRenderFns: []}
-	
-	/***/ },
-	
-	/***/ 140:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	var __vue_exports__, __vue_options__
-	
-	/* styles */
-	__webpack_require__(105)
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(62)
-	
-	/* template */
-	var __vue_template__ = __webpack_require__(176)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	
-	__vue_options__.render = __vue_template__.render
-	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-	
-	module.exports = __vue_exports__
-	
-	
-	/***/ },
-	
-	/***/ 176:
-	/***/ function(module, exports) {
-	
-	module.exports={render:function (){with(this) {
-	  return _h('div', {
-	    staticClass: "mint-loadmore"
-	  }, [_h('div', {
-	    staticClass: "mint-loadmore-content",
-	    class: {
-	      'is-dropped': topDropped || bottomDropped
-	    },
-	    style: ({
-	      'transform': 'translate3d(0, ' + translate + 'px, 0)'
-	    })
-	  }, [_t("top", [(topMethod) ? _h('div', {
-	    staticClass: "mint-loadmore-top"
-	  }, [(topStatus === 'loading') ? _h('spinner', {
-	    staticClass: "mint-loadmore-spinner",
-	    attrs: {
-	      "size": 20,
-	      "type": "fading-circle"
-	    }
-	  }) : _e(), " ", _h('span', {
-	    staticClass: "mint-loadmore-text"
-	  }, [_s(topText)])]) : _e()]), " ", _t("default"), " ", _t("bottom", [(bottomMethod) ? _h('div', {
-	    staticClass: "mint-loadmore-bottom"
-	  }, [(bottomStatus === 'loading') ? _h('spinner', {
-	    staticClass: "mint-loadmore-spinner",
-	    attrs: {
-	      "size": 20,
-	      "type": "fading-circle"
-	    }
-	  }) : _e(), " ", _h('span', {
-	    staticClass: "mint-loadmore-text"
-	  }, [_s(bottomText)])]) : _e()])])])
-	}},staticRenderFns: []}
-	
-	/***/ },
-	
-	/***/ 222:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	module.exports = __webpack_require__(30);
-	
-	
-	/***/ },
-	
-	/***/ 30:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	"use strict";
-	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_loadmore_vue__ = __webpack_require__(140);
-	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_loadmore_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_loadmore_vue__);
-	
-	module.exports = __WEBPACK_IMPORTED_MODULE_0__src_loadmore_vue___default.a;
-	
-	
-	/***/ },
-	
-	/***/ 4:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	var __vue_exports__, __vue_options__
-	
-	/* script */
-	__vue_exports__ = __webpack_require__(7)
-	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-	if (
-	  typeof __vue_exports__.default === "object" ||
-	  typeof __vue_exports__.default === "function"
-	) {
-	__vue_options__ = __vue_exports__ = __vue_exports__.default
-	}
-	if (typeof __vue_options__ === "function") {
-	  __vue_options__ = __vue_options__.options
-	}
-	
-	
-	module.exports = __vue_exports__
-	
-	
-	/***/ },
-	
-	/***/ 62:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	"use strict";
-	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_packages_spinner_src_spinner_fading_circle_vue__ = __webpack_require__(12);
-	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_mint_ui_packages_spinner_src_spinner_fading_circle_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_mint_ui_packages_spinner_src_spinner_fading_circle_vue__);
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	
-	
-	/* harmony default export */ exports["default"] = {
-	  name: 'mt-loadmore',
-	  components: {
-	    'spinner': __WEBPACK_IMPORTED_MODULE_0_mint_ui_packages_spinner_src_spinner_fading_circle_vue___default.a
-	  },
-	
-	  props: {
-	    maxDistance: {
-	      type: Number,
-	      default: 0
-	    },
-	    autoFill: {
-	      type: Boolean,
-	      default: true
-	    },
-	    distanceIndex: {
-	      type: Number,
-	      default: 2
-	    },
-	    topPullText: {
-	      type: String,
-	      default: '下拉刷新'
-	    },
-	    topDropText: {
-	      type: String,
-	      default: '释放更新'
-	    },
-	    topLoadingText: {
-	      type: String,
-	      default: '加载中...'
-	    },
-	    topDistance: {
-	      type: Number,
-	      default: 70
-	    },
-	    topMethod: {
-	      type: Function
-	    },
-	    bottomPullText: {
-	      type: String,
-	      default: '上拉刷新'
-	    },
-	    bottomDropText: {
-	      type: String,
-	      default: '释放更新'
-	    },
-	    bottomLoadingText: {
-	      type: String,
-	      default: '加载中...'
-	    },
-	    bottomDistance: {
-	      type: Number,
-	      default: 70
-	    },
-	    bottomMethod: {
-	      type: Function
-	    },
-	    bottomAllLoaded: {
-	      type: Boolean,
-	      default: false
-	    }
-	  },
-	
-	  data: function data() {
-	    return {
-	      uuid: null,
-	      translate: 0,
-	      scrollEventTarget: null,
-	      containerFilled: false,
-	      topText: '',
-	      topDropped: false,
-	      bottomText: '',
-	      bottomDropped: false,
-	      bottomReached: false,
-	      direction: '',
-	      startY: 0,
-	      startScrollTop: 0,
-	      currentY: 0,
-	      topStatus: '',
-	      bottomStatus: ''
-	    };
-	  },
-	
-	  watch: {
-	    topStatus: function topStatus(val) {
-	      this.$emit('top-status-change', val);
-	      switch (val) {
-	        case 'pull':
-	          this.topText = this.topPullText;
-	          break;
-	        case 'drop':
-	          this.topText = this.topDropText;
-	          break;
-	        case 'loading':
-	          this.topText = this.topLoadingText;
-	          break;
-	      }
-	    },
-	
-	    bottomStatus: function bottomStatus(val) {
-	      this.$emit('bottom-status-change', val);
-	      switch (val) {
-	        case 'pull':
-	          this.bottomText = this.bottomPullText;
-	          break;
-	        case 'drop':
-	          this.bottomText = this.bottomDropText;
-	          break;
-	        case 'loading':
-	          this.bottomText = this.bottomLoadingText;
-	          break;
-	      }
-	    }
-	  },
-	
-	  methods: {
-	    onTopLoaded: function onTopLoaded(id) {
-	      var this$1 = this;
-	
-	      if (id === this.uuid) {
-	        this.translate = 0;
-	        setTimeout(function () {
-	          this$1.topStatus = 'pull';
-	        }, 200);
-	      }
-	    },
-	
-	    onBottomLoaded: function onBottomLoaded(id) {
-	      var this$1 = this;
-	
-	      this.bottomStatus = 'pull';
-	      this.bottomDropped = false;
-	      if (id === this.uuid) {
-	        this.$nextTick(function () {
-	          if (this$1.scrollEventTarget === window) {
-	            document.body.scrollTop += 50;
-	          } else {
-	            this$1.scrollEventTarget.scrollTop += 50;
-	          }
-	          this$1.translate = 0;
-	        });
-	      }
-	      if (!this.bottomAllLoaded && !this.containerFilled) {
-	        this.fillContainer();
-	      }
-	    },
-	
-	    getScrollEventTarget: function getScrollEventTarget(element) {
-	      var currentNode = element;
-	      while (currentNode && currentNode.tagName !== 'HTML' &&
-	        currentNode.tagName !== 'BODY' && currentNode.nodeType === 1) {
-	        var overflowY = document.defaultView.getComputedStyle(currentNode).overflowY;
-	        if (overflowY === 'scroll' || overflowY === 'auto') {
-	          return currentNode;
-	        }
-	        currentNode = currentNode.parentNode;
-	      }
-	      return window;
-	    },
-	
-	    getScrollTop: function getScrollTop(element) {
-	      if (element === window) {
-	        return Math.max(window.pageYOffset || 0, document.documentElement.scrollTop);
-	      } else {
-	        return element.scrollTop;
-	      }
-	    },
-	
-	    bindTouchEvents: function bindTouchEvents() {
-	      this.$el.addEventListener('touchstart', this.handleTouchStart);
-	      this.$el.addEventListener('touchmove', this.handleTouchMove);
-	      this.$el.addEventListener('touchend', this.handleTouchEnd);
-	    },
-	
-	    init: function init() {
-	      this.topStatus = 'pull';
-	      this.bottomStatus = 'pull';
-	      this.topText = this.topPullText;
-	      this.scrollEventTarget = this.getScrollEventTarget(this.$el);
-	      if (typeof this.bottomMethod === 'function') {
-	        this.fillContainer();
-	        this.bindTouchEvents();
-	      }
-	      if (typeof this.topMethod === 'function') {
-	        this.bindTouchEvents();
-	      }
-	    },
-	
-	    fillContainer: function fillContainer() {
-	      var this$1 = this;
-	
-	      if (this.autoFill) {
-	        this.$nextTick(function () {
-	          if (this$1.scrollEventTarget === window) {
-	            this$1.containerFilled = this$1.$el.getBoundingClientRect().bottom >=
-	              document.documentElement.getBoundingClientRect().bottom;
-	          } else {
-	            this$1.containerFilled = this$1.$el.getBoundingClientRect().bottom >=
-	              this$1.scrollEventTarget.getBoundingClientRect().bottom;
-	          }
-	          if (!this$1.containerFilled) {
-	            this$1.bottomStatus = 'loading';
-	            this$1.bottomMethod(this$1.uuid);
-	          }
-	        });
-	      }
-	    },
-	
-	    checkBottomReached: function checkBottomReached() {
-	      if (this.scrollEventTarget === window) {
-	        return document.body.scrollTop + document.documentElement.clientHeight >= document.body.scrollHeight;
-	      } else {
-	        return this.$el.getBoundingClientRect().bottom <= this.scrollEventTarget.getBoundingClientRect().bottom + 1;
-	      }
-	    },
-	
-	    handleTouchStart: function handleTouchStart(event) {
-	      this.startY = event.touches[0].clientY;
-	      this.startScrollTop = this.getScrollTop(this.scrollEventTarget);
-	      this.bottomReached = false;
-	      if (this.topStatus !== 'loading') {
-	        this.topStatus = 'pull';
-	        this.topDropped = false;
-	      }
-	      if (this.bottomStatus !== 'loading') {
-	        this.bottomStatus = 'pull';
-	        this.bottomDropped = false;
-	      }
-	    },
-	
-	    handleTouchMove: function handleTouchMove(event) {
-	      if (this.startY < this.$el.getBoundingClientRect().top && this.startY > this.$el.getBoundingClientRect().bottom) {
-	        return;
-	      }
-	      this.currentY = event.touches[0].clientY;
-	      var distance = (this.currentY - this.startY) / this.distanceIndex;
-	      this.direction = distance > 0 ? 'down' : 'up';
-	      if (typeof this.topMethod === 'function' && this.direction === 'down' &&
-	        this.getScrollTop(this.scrollEventTarget) === 0 && this.topStatus !== 'loading') {
-	        event.preventDefault();
-	        event.stopPropagation();
-	        if (this.maxDistance > 0) {
-	          this.translate = distance <= this.maxDistance ? distance - this.startScrollTop : this.translate;
-	        } else {
-	          this.translate = distance - this.startScrollTop;
-	        }
-	        if (this.translate < 0) {
-	          this.translate = 0;
-	        }
-	        this.topStatus = this.translate >= this.topDistance ? 'drop' : 'pull';
-	      }
-	
-	      if (this.direction === 'up') {
-	        this.bottomReached = this.bottomReached || this.checkBottomReached();
-	      }
-	      if (typeof this.bottomMethod === 'function' && this.direction === 'up' &&
-	        this.bottomReached && this.bottomStatus !== 'loading' && !this.bottomAllLoaded) {
-	        event.preventDefault();
-	        event.stopPropagation();
-	        if (this.maxDistance > 0) {
-	          this.translate = Math.abs(distance) <= this.maxDistance
-	            ? this.getScrollTop(this.scrollEventTarget) - this.startScrollTop + distance : this.translate;
-	        } else {
-	          this.translate = this.getScrollTop(this.scrollEventTarget) - this.startScrollTop + distance;
-	        }
-	        if (this.translate > 0) {
-	          this.translate = 0;
-	        }
-	        this.bottomStatus = -this.translate >= this.bottomDistance ? 'drop' : 'pull';
-	      }
-	    },
-	
-	    handleTouchEnd: function handleTouchEnd() {
-	      if (this.direction === 'down' && this.getScrollTop(this.scrollEventTarget) === 0 && this.translate > 0) {
-	        this.topDropped = true;
-	        if (this.topStatus === 'drop') {
-	          this.translate = '50';
-	          this.topStatus = 'loading';
-	          this.topMethod(this.uuid);
-	        } else {
-	          this.translate = '0';
-	          this.topStatus = 'pull';
-	        }
-	      }
-	      if (this.direction === 'up' && this.bottomReached && this.translate < 0) {
-	        this.bottomDropped = true;
-	        this.bottomReached = false;
-	        if (this.bottomStatus === 'drop') {
-	          this.translate = '-50';
-	          this.bottomStatus = 'loading';
-	          this.bottomMethod(this.uuid);
-	        } else {
-	          this.translate = '0';
-	          this.bottomStatus = 'pull';
-	        }
-	      }
-	      this.direction = '';
-	    }
-	  },
-	
-	  mounted: function mounted() {
-	    this.uuid = Math.random().toString(36).substring(3, 8);
-	    this.init();
-	  }
-	};
-	
-	
-	/***/ },
-	
-	/***/ 7:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	"use strict";
-	
-	/* harmony default export */ exports["default"] = {
-	  computed: {
-	    spinnerColor: function spinnerColor() {
-	      return this.color || this.$parent.color || '#ccc';
-	    },
-	
-	    spinnerSize: function spinnerSize() {
-	      return (this.size || this.$parent.size || 28) + 'px';
-	    }
-	  },
-	
-	  props: {
-	    size: Number,
-	    color: String
-	  }
-	};
-	
-	
-	/***/ },
-	
-	/***/ 8:
-	/***/ function(module, exports, __webpack_require__) {
-	
-	"use strict";
-	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue__ = __webpack_require__(4);
-	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_vue__);
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	
-	
-	
-	/* harmony default export */ exports["default"] = {
-	  name: 'fading-circle',
-	
-	  mixins: [__WEBPACK_IMPORTED_MODULE_0__common_vue___default.a],
-	
-	  created: function created() {
-	    this.styleNode = document.createElement('style');
-	    var css = ".circle-color-" + (this._uid) + " > div::before { background-color: " + (this.spinnerColor) + "; }";
-	
-	    this.styleNode.type = 'text/css';
-	    this.styleNode.rel = 'stylesheet';
-	    this.styleNode.title = 'fading circle style';
-	    document.getElementsByTagName('head')[0].appendChild(this.styleNode);
-	    this.styleNode.appendChild(document.createTextNode(css));
-	  },
-	
-	  destroyed: function destroyed() {
-	    if (this.styleNode) {
-	      this.styleNode.parentNode.removeChild(this.styleNode);
-	    }
-	  }
-	};
-	
-	
-	/***/ }
-	
-	/******/ });
 
 /***/ },
 
@@ -10625,7 +9665,597 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 405:
+/***/ 406:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* styles */
+	__webpack_require__(407)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(409)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(413)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "D:\\code\\php\\htdocs\\vue-comp\\vue-comp\\src\\js\\example\\infinite.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-c0b4a7f2", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-c0b4a7f2", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] infinite.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+
+/***/ 407:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(408);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(399)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-c0b4a7f2!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./infinite.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-c0b4a7f2!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./infinite.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 408:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(381)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\n.sub-page{\n    overflow: hidden !important;\n}\n.item{\n    width: 100%; line-height:40px;\n    font-size:16px; color:#333; text-align:center;\n    background-color: #efeff4;\n    border-bottom:1px solid #e8e8e8;\n}\n", "", {"version":3,"sources":["/./src/js/example/infinite.vue?9e2c4786"],"names":[],"mappings":";AACA;IACA,4BAAA;CACA;AACA;IACA,YAAA,CAAA,iBAAA;IACA,eAAA,CAAA,WAAA,CAAA,kBAAA;IACA,0BAAA;IACA,gCAAA;CACA","file":"infinite.vue","sourcesContent":["<style>\r\n    .sub-page{\r\n        overflow: hidden !important;\r\n    }\r\n    .item{\r\n        width: 100%; line-height:40px;\r\n        font-size:16px; color:#333; text-align:center;\r\n        background-color: #efeff4;\r\n        border-bottom:1px solid #e8e8e8;\r\n    }\r\n</style>\r\n\r\n<template>\r\n    <div class=\"sub-page\">\r\n        <mt-header title=\"无限滚动\">\r\n            <router-link to=\"/\" slot=\"left\">\r\n                <mt-button icon=\"back\">返回</mt-button>\r\n            </router-link>\r\n        </mt-header>\r\n        <div class=\"mt-scroll-body\">\r\n            <ul class=\"infinite-box\"\r\n                v-infinite-scroll=\"loadMore\"\r\n                infinite-scroll-disabled=\"loading\"\r\n                infinite-scroll-distance=\"10\">\r\n                <li class=\"item\" v-for=\"item of items\">{{item.name}}</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n    import Mock from \"mockjs\";\r\n    import Vue from \"vue\";\r\n    import { InfiniteScroll, Header, Button } from 'mint-ui';\r\n    Vue.use(InfiniteScroll);\r\n    Vue.component(Header.name, Header);\r\n    Vue.component(Button.name, Button);\r\n\r\n    import zepto from \"zepto\";\r\n\r\n    export default{\r\n        data:function(){\r\n            return {\r\n                items:[],\r\n                recordNo:0,\r\n                loading:false,\r\n                groupHeight:205\r\n            }\r\n        },\r\n        methods:{\r\n            loadMore:function(){\r\n                var self = this;\r\n                var initNo = Math.ceil($(\".mt-scroll-body\").height() / self.groupHeight) * 5;\r\n                self.loading = true;\r\n                setTimeout(function(){\r\n                    Mock.Random.city(true);\r\n                    var data = Mock.mock({\r\n                        \"array|5\": [\r\n                            {\r\n                                \"name\":'@city'\r\n                            }\r\n                        ]\r\n                    });\r\n                    if(self.recordNo < 35){\r\n                        self.items = self.items.concat(data.array);\r\n                        self.recordNo += 5;\r\n                        if(self.recordNo < initNo){\r\n                            self.loadMore();\r\n                        }\r\n                    }\r\n                    self.loading = false;\r\n                },1000);\r\n            }\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
+	
+	// exports
+
+
+/***/ },
+
+/***/ 409:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _style = __webpack_require__(379);
+	
+	var _style2 = _interopRequireDefault(_style);
+	
+	var _button = __webpack_require__(383);
+	
+	var _button2 = _interopRequireDefault(_button);
+	
+	var _style3 = __webpack_require__(386);
+	
+	var _style4 = _interopRequireDefault(_style3);
+	
+	var _header = __webpack_require__(388);
+	
+	var _header2 = _interopRequireDefault(_header);
+	
+	var _style5 = __webpack_require__(410);
+	
+	var _style6 = _interopRequireDefault(_style5);
+	
+	var _infiniteScroll = __webpack_require__(412);
+	
+	var _infiniteScroll2 = _interopRequireDefault(_infiniteScroll);
+	
+	var _mockjs = __webpack_require__(404);
+	
+	var _mockjs2 = _interopRequireDefault(_mockjs);
+	
+	var _vue = __webpack_require__(1);
+	
+	var _vue2 = _interopRequireDefault(_vue);
+	
+	var _zepto = __webpack_require__(7);
+	
+	var _zepto2 = _interopRequireDefault(_zepto);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	_vue2.default.use(_infiniteScroll2.default);
+	_vue2.default.component(_header2.default.name, _header2.default);
+	_vue2.default.component(_button2.default.name, _button2.default);
+	
+	exports.default = {
+	    data: function data() {
+	        return {
+	            items: [],
+	            recordNo: 0,
+	            loading: false,
+	            groupHeight: 205
+	        };
+	    },
+	    methods: {
+	        loadMore: function loadMore() {
+	            var self = this;
+	            var initNo = Math.ceil($(".mt-scroll-body").height() / self.groupHeight) * 5;
+	            self.loading = true;
+	            setTimeout(function () {
+	                _mockjs2.default.Random.city(true);
+	                var data = _mockjs2.default.mock({
+	                    "array|5": [{
+	                        "name": '@city'
+	                    }]
+	                });
+	                if (self.recordNo < 35) {
+	                    self.items = self.items.concat(data.array);
+	                    self.recordNo += 5;
+	                    if (self.recordNo < initNo) {
+	                        self.loadMore();
+	                    }
+	                }
+	                self.loading = false;
+	            }, 1000);
+	        }
+	    }
+	};
+
+/***/ },
+
+/***/ 410:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(411);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(382)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../../css-loader/index.js!./style.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 411:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(381)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\n", ""]);
+	
+	// exports
+
+
+/***/ },
+
+/***/ 412:
+/***/ function(module, exports) {
+
+	module.exports =
+	/******/ (function(modules) { // webpackBootstrap
+	/******/ 	// The module cache
+	/******/ 	var installedModules = {};
+	
+	/******/ 	// The require function
+	/******/ 	function __webpack_require__(moduleId) {
+	
+	/******/ 		// Check if module is in cache
+	/******/ 		if(installedModules[moduleId])
+	/******/ 			return installedModules[moduleId].exports;
+	
+	/******/ 		// Create a new module (and put it into the cache)
+	/******/ 		var module = installedModules[moduleId] = {
+	/******/ 			i: moduleId,
+	/******/ 			l: false,
+	/******/ 			exports: {}
+	/******/ 		};
+	
+	/******/ 		// Execute the module function
+	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+	
+	/******/ 		// Flag the module as loaded
+	/******/ 		module.l = true;
+	
+	/******/ 		// Return the exports of the module
+	/******/ 		return module.exports;
+	/******/ 	}
+	
+	
+	/******/ 	// expose the modules object (__webpack_modules__)
+	/******/ 	__webpack_require__.m = modules;
+	
+	/******/ 	// expose the module cache
+	/******/ 	__webpack_require__.c = installedModules;
+	
+	/******/ 	// identity function for calling harmory imports with the correct context
+	/******/ 	__webpack_require__.i = function(value) { return value; };
+	
+	/******/ 	// define getter function for harmory exports
+	/******/ 	__webpack_require__.d = function(exports, name, getter) {
+	/******/ 		Object.defineProperty(exports, name, {
+	/******/ 			configurable: false,
+	/******/ 			enumerable: true,
+	/******/ 			get: getter
+	/******/ 		});
+	/******/ 	};
+	
+	/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+	/******/ 	__webpack_require__.n = function(module) {
+	/******/ 		var getter = module && module.__esModule ?
+	/******/ 			function getDefault() { return module['default']; } :
+	/******/ 			function getModuleExports() { return module; };
+	/******/ 		__webpack_require__.d(getter, 'a', getter);
+	/******/ 		return getter;
+	/******/ 	};
+	
+	/******/ 	// Object.prototype.hasOwnProperty.call
+	/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+	
+	/******/ 	// __webpack_public_path__
+	/******/ 	__webpack_require__.p = "";
+	
+	/******/ 	// Load entry module and return exports
+	/******/ 	return __webpack_require__(__webpack_require__.s = 220);
+	/******/ })
+	/************************************************************************/
+	/******/ ({
+	
+	/***/ 2:
+	/***/ function(module, exports) {
+	
+	// removed by extract-text-webpack-plugin
+	
+	/***/ },
+	
+	/***/ 220:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	module.exports = __webpack_require__(28);
+	
+	
+	/***/ },
+	
+	/***/ 28:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_infinite_scroll_js__ = __webpack_require__(86);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_src_style_empty_css__ = __webpack_require__(2);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_src_style_empty_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_src_style_empty_css__);
+	
+	
+	
+	module.exports = __WEBPACK_IMPORTED_MODULE_0__src_infinite_scroll_js__["a" /* default */];
+	
+	
+	/***/ },
+	
+	/***/ 85:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	var ctx = '@@InfiniteScroll';
+	
+	var throttle = function(fn, delay) {
+	  var now, lastExec, timer, context, args; //eslint-disable-line
+	
+	  var execute = function() {
+	    fn.apply(context, args);
+	    lastExec = now;
+	  };
+	
+	  return function() {
+	    context = this;
+	    args = arguments;
+	
+	    now = Date.now();
+	
+	    if (timer) {
+	      clearTimeout(timer);
+	      timer = null;
+	    }
+	
+	    if (lastExec) {
+	      var diff = delay - (now - lastExec);
+	      if (diff < 0) {
+	        execute();
+	      } else {
+	        timer = setTimeout(function () {
+	          execute();
+	        }, diff);
+	      }
+	    } else {
+	      execute();
+	    }
+	  };
+	};
+	
+	var getScrollTop = function(element) {
+	  if (element === window) {
+	    return Math.max(window.pageYOffset || 0, document.documentElement.scrollTop);
+	  }
+	
+	  return element.scrollTop;
+	};
+	
+	var getComputedStyle = document.defaultView.getComputedStyle;
+	
+	var getScrollEventTarget = function(element) {
+	  var currentNode = element;
+	  // bugfix, see http://w3help.org/zh-cn/causes/SD9013 and http://stackoverflow.com/questions/17016740/onscroll-function-is-not-working-for-chrome
+	  while (currentNode && currentNode.tagName !== 'HTML' && currentNode.tagName !== 'BODY' && currentNode.nodeType === 1) {
+	    var overflowY = getComputedStyle(currentNode).overflowY;
+	    if (overflowY === 'scroll' || overflowY === 'auto') {
+	      return currentNode;
+	    }
+	    currentNode = currentNode.parentNode;
+	  }
+	  return window;
+	};
+	
+	var getVisibleHeight = function(element) {
+	  if (element === window) {
+	    return document.documentElement.clientHeight;
+	  }
+	
+	  return element.clientHeight;
+	};
+	
+	var getElementTop = function(element) {
+	  if (element === window) {
+	    return getScrollTop(window);
+	  }
+	  return element.getBoundingClientRect().top + getScrollTop(window);
+	};
+	
+	var isAttached = function(element) {
+	  var currentNode = element.parentNode;
+	  while (currentNode) {
+	    if (currentNode.tagName === 'HTML') {
+	      return true;
+	    }
+	    if (currentNode.nodeType === 11) {
+	      return false;
+	    }
+	    currentNode = currentNode.parentNode;
+	  }
+	  return false;
+	};
+	
+	var doBind = function() {
+	  if (this.binded) return; // eslint-disable-line
+	  this.binded = true;
+	
+	  var directive = this;
+	  var element = directive.el;
+	
+	  directive.scrollEventTarget = getScrollEventTarget(element);
+	  directive.scrollListener = throttle(doCheck.bind(directive), 200);
+	  directive.scrollEventTarget.addEventListener('scroll', directive.scrollListener);
+	
+	  var disabledExpr = element.getAttribute('infinite-scroll-disabled');
+	  var disabled = false;
+	
+	  if (disabledExpr) {
+	    this.vm.$watch(disabledExpr, function(value) {
+	      directive.disabled = value;
+	      if (!value && directive.immediateCheck) {
+	        doCheck.call(directive);
+	      }
+	    });
+	    disabled = Boolean(directive.vm[disabledExpr]);
+	  }
+	  directive.disabled = disabled;
+	
+	  var distanceExpr = element.getAttribute('infinite-scroll-distance');
+	  var distance = 0;
+	  if (distanceExpr) {
+	    distance = Number(directive.vm[distanceExpr] || distanceExpr);
+	    if (isNaN(distance)) {
+	      distance = 0;
+	    }
+	  }
+	  directive.distance = distance;
+	
+	  var immediateCheckExpr = element.getAttribute('infinite-scroll-immediate-check');
+	  var immediateCheck = true;
+	  if (immediateCheckExpr) {
+	    immediateCheck = Boolean(directive.vm[immediateCheckExpr]);
+	  }
+	  directive.immediateCheck = immediateCheck;
+	
+	  if (immediateCheck) {
+	    doCheck.call(directive);
+	  }
+	
+	  var eventName = element.getAttribute('infinite-scroll-listen-for-event');
+	  if (eventName) {
+	    directive.vm.$on(eventName, function() {
+	      doCheck.call(directive);
+	    });
+	  }
+	};
+	
+	var doCheck = function(force) {
+	  var scrollEventTarget = this.scrollEventTarget;
+	  var element = this.el;
+	  var distance = this.distance;
+	
+	  if (force !== true && this.disabled) return; //eslint-disable-line
+	  var viewportScrollTop = getScrollTop(scrollEventTarget);
+	  var viewportBottom = viewportScrollTop + getVisibleHeight(scrollEventTarget);
+	
+	  var shouldTrigger = false;
+	
+	  if (scrollEventTarget === element) {
+	    shouldTrigger = scrollEventTarget.scrollHeight - viewportBottom <= distance;
+	  } else {
+	    var elementBottom = getElementTop(element) - getElementTop(scrollEventTarget) + element.offsetHeight + viewportScrollTop;
+	
+	    shouldTrigger = viewportBottom + distance >= elementBottom;
+	  }
+	
+	  if (shouldTrigger && this.expression) {
+	    this.expression();
+	  }
+	};
+	
+	/* harmony default export */ exports["a"] = {
+	  bind: function bind(el, binding, vnode) {
+	    el[ctx] = {
+	      el: el,
+	      vm: vnode.context,
+	      expression: binding.value
+	    };
+	    var args = arguments;
+	    el[ctx].vm.$on('hook:mounted', function() {
+	      el[ctx].vm.$nextTick(function() {
+	        if (isAttached(el)) {
+	          doBind.call(el[ctx], args);
+	        }
+	
+	        el[ctx].bindTryCount = 0;
+	
+	        var tryBind = function() {
+	          if (el[ctx].bindTryCount > 10) return; //eslint-disable-line
+	          el[ctx].bindTryCount++;
+	          if (isAttached(el)) {
+	            doBind.call(el[ctx], args);
+	          } else {
+	            setTimeout(tryBind, 50);
+	          }
+	        };
+	
+	        tryBind();
+	      });
+	    });
+	  },
+	
+	  unbind: function unbind(el) {
+	    el[ctx].scrollEventTarget.removeEventListener('scroll', el[ctx].scrollListener);
+	  }
+	};
+	
+	
+	/***/ },
+	
+	/***/ 86:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directive__ = __webpack_require__(85);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_src_style_empty_css__ = __webpack_require__(2);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mint_ui_src_style_empty_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mint_ui_src_style_empty_css__);
+	
+	
+	
+	var install = function(Vue) {
+	  Vue.directive('InfiniteScroll', __WEBPACK_IMPORTED_MODULE_0__directive__["a" /* default */]);
+	};
+	
+	if (window.Vue) {
+	  window.infiniteScroll = __WEBPACK_IMPORTED_MODULE_0__directive__["a" /* default */];
+	  Vue.use(install); // eslint-disable-line
+	}
+	
+	__WEBPACK_IMPORTED_MODULE_0__directive__["a" /* default */].install = install;
+	/* harmony default export */ exports["a"] = __WEBPACK_IMPORTED_MODULE_0__directive__["a" /* default */];
+	
+	
+	/***/ }
+	
+	/******/ });
+
+/***/ },
+
+/***/ 413:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;
@@ -10633,7 +10263,7 @@ webpackJsonp([2],{
 	    staticClass: "sub-page"
 	  }, [_vm._h('mt-header', {
 	    attrs: {
-	      "title": "加载更多"
+	      "title": "无限滚动"
 	    }
 	  }, [_vm._h('router-link', {
 	    slot: "left",
@@ -10646,27 +10276,32 @@ webpackJsonp([2],{
 	    }
 	  }, ["返回"])])]), " ", _vm._h('div', {
 	    staticClass: "mt-scroll-body"
-	  }, [_vm._h('mt-loadmore', {
-	    ref: "loadmore",
+	  }, [_vm._h('ul', {
+	    directives: [{
+	      name: "infinite-scroll",
+	      rawName: "v-infinite-scroll",
+	      value: (_vm.loadMore),
+	      expression: "loadMore"
+	    }],
+	    staticClass: "infinite-box",
 	    attrs: {
-	      "top-method": _vm.loadTop,
-	      "bottom-method": _vm.loadBottom,
-	      "bottom-all-loaded": _vm.allLoaded
+	      "infinite-scroll-disabled": "loading",
+	      "infinite-scroll-distance": "10"
 	    }
-	  }, [_vm._h('div', [_vm._l((_vm.items), function(item) {
-	    return _vm._h('p', {
+	  }, [_vm._l((_vm.items), function(item) {
+	    return _vm._h('li', {
 	      staticClass: "item"
 	    }, [_vm._s(item.name)])
-	  })])])])])
+	  })])])])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-f5c2e30e", module.exports)
+	     require("vue-hot-reload-api").rerender("data-v-c0b4a7f2", module.exports)
 	  }
 	}
 
 /***/ }
 
 });
-//# sourceMappingURL=2.chunk.js.map
+//# sourceMappingURL=3.chunk.js.map

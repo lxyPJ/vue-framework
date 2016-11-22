@@ -3,20 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="24ccfa27-ac2d-4e8c-9ddc-0620db832447" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/1.chunk.js" afterPath="$PROJECT_DIR$/dist/bundle/1.chunk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/1.chunk.js.map" afterPath="$PROJECT_DIR$/dist/bundle/1.chunk.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/2.chunk.js" afterPath="$PROJECT_DIR$/dist/bundle/2.chunk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/2.chunk.js.map" afterPath="$PROJECT_DIR$/dist/bundle/2.chunk.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/app.js" afterPath="$PROJECT_DIR$/dist/bundle/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/app.js.map" afterPath="$PROJECT_DIR$/dist/bundle/app.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/common.js" afterPath="$PROJECT_DIR$/dist/bundle/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/bundle/common.js.map" afterPath="$PROJECT_DIR$/dist/bundle/common.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/html/app.html" afterPath="$PROJECT_DIR$/dist/html/app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/style/app.css" afterPath="$PROJECT_DIR$/dist/style/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/html/app.html" afterPath="$PROJECT_DIR$/src/html/app.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app.js" afterPath="$PROJECT_DIR$/src/js/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/example/load-more.vue" afterPath="$PROJECT_DIR$/src/js/example/load-more.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/app.scss" afterPath="$PROJECT_DIR$/src/style/app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/base/_common.scss" afterPath="$PROJECT_DIR$/src/style/base/_common.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/base/_font.scss" afterPath="$PROJECT_DIR$/src/style/base/_font.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/base/_layout.scss" afterPath="$PROJECT_DIR$/src/style/base/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/components/_button.scss" afterPath="$PROJECT_DIR$/src/style/components/_button.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style/layout/_header.scss" afterPath="$PROJECT_DIR$/src/style/layout/_header.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/modules/slideload.js" afterPath="$PROJECT_DIR$/src/js/modules/slideload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/store/index.js" afterPath="$PROJECT_DIR$/src/js/store/index.js" />
     </list>
     <ignored path="vue-comp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,8 +39,8 @@
       <file leaf-file-name="app.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/html/app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.285714">
-              <caret line="28" column="53" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="53" />
+            <state vertical-scroll-proportion="-8.571428">
+              <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -51,7 +50,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -60,18 +59,18 @@
       <file leaf-file-name="load-more.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/example/load-more.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.142857">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+            <state vertical-scroll-proportion="-7.3333335">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_load-more.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/style/components/_load-more.scss">
+      <file leaf-file-name="infinite.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/example/infinite.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04225352">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.7887324">
+              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -90,6 +89,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/js/example/infinite.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/js/example/load-more.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/js/components/common/solid-button.vue" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/html/app.html" root0="SKIP_INSPECTION" />
@@ -107,20 +107,22 @@
         <option value="$PROJECT_DIR$/src/js/modules/ajaxRequest.js" />
         <option value="$PROJECT_DIR$/src/js/example/swipe.vue" />
         <option value="$PROJECT_DIR$/src/js/components/common/solid-button.vue" />
-        <option value="$PROJECT_DIR$/src/js/store/index.js" />
         <option value="$PROJECT_DIR$/src/js/components/common/page-loading.vue" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/js/app.js" />
         <option value="$PROJECT_DIR$/src/style/base/_reset.scss" />
-        <option value="$PROJECT_DIR$/src/style/base/_layout.scss" />
-        <option value="$PROJECT_DIR$/src/html/app.html" />
-        <option value="$PROJECT_DIR$/src/js/example/load-more.vue" />
         <option value="$PROJECT_DIR$/src/style/base/_common.scss" />
         <option value="$PROJECT_DIR$/src/style/components/_button.scss" />
         <option value="$PROJECT_DIR$/src/style/layout/_header.scss" />
         <option value="$PROJECT_DIR$/src/style/base/_font.scss" />
         <option value="$PROJECT_DIR$/src/style/app.scss" />
         <option value="$PROJECT_DIR$/src/style/components/_load-more.scss" />
+        <option value="$PROJECT_DIR$/src/js/example/load-more.vue" />
+        <option value="$PROJECT_DIR$/src/js/store/index.js" />
+        <option value="$PROJECT_DIR$/src/html/app.html" />
+        <option value="$PROJECT_DIR$/src/js/app.js" />
+        <option value="$PROJECT_DIR$/src/style/base/_layout.scss" />
+        <option value="$PROJECT_DIR$/src/js/modules/slideload.js" />
+        <option value="$PROJECT_DIR$/src/js/example/infinite.vue" />
       </list>
     </option>
   </component>
@@ -238,7 +240,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
+              <option name="myItemId" value="base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,6 +259,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-comp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vue-comp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,7 +395,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21285564" sideWeight="0.52654386" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21285564" sideWeight="0.4734561" order="2" side_tool="false" content_ui="combo" />
@@ -454,6 +478,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -468,6 +493,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -608,32 +634,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.040268455">
-          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/common/page-loading.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45070422">
           <caret line="28" column="19" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3557047">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,26 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/html/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.285714">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/components/_button.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7183099">
           <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/base/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.92957747">
-          <caret line="22" column="50" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -707,18 +695,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/example/load-more.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.142857">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/components/_load-more.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04225352">
           <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44295302">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.571428">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/example/load-more.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40268457">
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/modules/slideload.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.040268455">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/base/_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8873239">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/example/infinite.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7887324">
+          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
           <folding />
         </state>
       </provider>

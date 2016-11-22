@@ -1,4 +1,4 @@
-var $ = require('jquery');
+var zepto = require('zepto');
 
 var slideload = function(){
     'use strict';

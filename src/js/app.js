@@ -20,6 +20,11 @@ const loadMore = resolve => {
         resolve(require('./example/load-more.vue'));
     })
 };
+const infinite = resolve => {
+    require.ensure([],() => {
+        resolve(require('./example/infinite.vue'));
+    })
+};
 //定义路由
 const routes = [
     {
@@ -29,6 +34,10 @@ const routes = [
     {
         path:'/loadMore',
         component:loadMore
+    },
+    {
+        path:'/infinite',
+        component:infinite
     }
 ];
 const router = new VueRouter({

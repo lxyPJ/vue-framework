@@ -12,17 +12,18 @@
 
 <template>
     <div class="sub-page">
-        <mt-header title="加载更多">
+        <mt-header title="无限滚动">
             <router-link to="/" slot="left">
                 <mt-button icon="back">返回</mt-button>
             </router-link>
         </mt-header>
         <div class="mt-scroll-body">
-            <mt-loadmore ref="loadmore" :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded">
-                <div>
-                    <p class="item" v-for="item of items">{{item.name}}</p>
-                </div>
-            </mt-loadmore>
+            <ul class="infinite-box"
+                v-infinite-scroll="loadMore"
+                infinite-scroll-disabled="loading"
+                infinite-scroll-distance="10">
+                <li class="item" v-for="item of items">{{item.name}}</li>
+            </ul>
         </div>
     </div>
 </template>
@@ -30,42 +31,27 @@
 <script>
     import Mock from "mockjs";
     import Vue from "vue";
-    import { Loadmore, Header, Button } from 'mint-ui';
-    Vue.component(Loadmore.name, Loadmore);
+    import { InfiniteScroll, Header, Button } from 'mint-ui';
+    Vue.use(InfiniteScroll);
     Vue.component(Header.name, Header);
     Vue.component(Button.name, Button);
+
+    import zepto from "zepto";
 
     export default{
         data:function(){
             return {
                 items:[],
                 recordNo:0,
-                allLoaded:false
+                loading:false,
+                groupHeight:205
             }
         },
         methods:{
-            loadTop:function(id){
+            loadMore:function(){
                 var self = this;
-                setTimeout(function(){
-                    var items = [];
-                    Mock.Random.city(true);
-                    for(let i=0; i<self.recordNo; i++){
-                        var data = Mock.mock({
-                            array: [
-                                {
-                                    "name":'@city'
-                                }
-                            ]
-                        });
-                        items = items.concat(data.array);
-                    }
-                    self.items = items;
-                    self.recordNo = items.length;
-                    self.$refs.loadmore.onTopLoaded(id);
-                },1000);
-            },
-            loadBottom:function(id){
-                var self = this;
+                var initNo = Math.ceil($(".mt-scroll-body").height() / self.groupHeight) * 5;
+                self.loading = true;
                 setTimeout(function(){
                     Mock.Random.city(true);
                     var data = Mock.mock({
@@ -78,10 +64,11 @@
                     if(self.recordNo < 35){
                         self.items = self.items.concat(data.array);
                         self.recordNo += 5;
-                    }else{
-                        self.allLoaded = true;//若数据已全部获取完毕
+                        if(self.recordNo < initNo){
+                            self.loadMore();
+                        }
                     }
-                    self.$refs.loadmore.onBottomLoaded(id);
+                    self.loading = false;
                 },1000);
             }
         }
