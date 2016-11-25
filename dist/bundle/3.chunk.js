@@ -15,8 +15,8 @@ webpackJsonp([3],{
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./../../../css-loader/index.js!./style.css");
+			module.hot.accept("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -624,8 +624,8 @@ webpackJsonp([3],{
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./../../../css-loader/index.js!./style.css");
+			module.hot.accept("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -666,8 +666,8 @@ webpackJsonp([3],{
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./../../../css-loader/index.js!./style.css");
+			module.hot.accept("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -9690,20 +9690,20 @@ webpackJsonp([3],{
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "D:\\code\\php\\htdocs\\vue-comp\\vue-comp\\src\\js\\example\\infinite.vue"
+	__vue_options__.__file = "E:\\xampp\\htdocs\\gitstore\\vue-comp\\src\\js\\example\\infinite.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
 	/* hot reload */
 	if (false) {(function () {
-	  var hotAPI = require("vue-hot-reload-api")
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-c0b4a7f2", __vue_options__)
+	    hotAPI.createRecord("data-v-732e34f4", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-c0b4a7f2", __vue_options__)
+	    hotAPI.reload("data-v-732e34f4", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] infinite.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -9728,8 +9728,8 @@ webpackJsonp([3],{
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-c0b4a7f2!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./infinite.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js?sourceMap!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=data-v-c0b4a7f2!./../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./infinite.vue");
+			module.hot.accept("!!./../../../node_modules/.npminstall/css-loader/0.25.0/css-loader/index.js?sourceMap!./../../../node_modules/.npminstall/vue-loader/9.9.5/vue-loader/lib/style-rewriter.js?id=data-v-732e34f4!./../../../node_modules/.npminstall/vue-loader/9.9.5/vue-loader/lib/selector.js?type=styles&index=0!./infinite.vue", function() {
+				var newContent = require("!!./../../../node_modules/.npminstall/css-loader/0.25.0/css-loader/index.js?sourceMap!./../../../node_modules/.npminstall/vue-loader/9.9.5/vue-loader/lib/style-rewriter.js?id=data-v-732e34f4!./../../../node_modules/.npminstall/vue-loader/9.9.5/vue-loader/lib/selector.js?type=styles&index=0!./infinite.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -9748,7 +9748,7 @@ webpackJsonp([3],{
 	
 	
 	// module
-	exports.push([module.id, "\n.sub-page{\n    overflow: hidden !important;\n}\n.item{\n    width: 100%; line-height:40px;\n    font-size:16px; color:#333; text-align:center;\n    background-color: #efeff4;\n    border-bottom:1px solid #e8e8e8;\n}\n", "", {"version":3,"sources":["/./src/js/example/infinite.vue?9e2c4786"],"names":[],"mappings":";AACA;IACA,4BAAA;CACA;AACA;IACA,YAAA,CAAA,iBAAA;IACA,eAAA,CAAA,WAAA,CAAA,kBAAA;IACA,0BAAA;IACA,gCAAA;CACA","file":"infinite.vue","sourcesContent":["<style>\r\n    .sub-page{\r\n        overflow: hidden !important;\r\n    }\r\n    .item{\r\n        width: 100%; line-height:40px;\r\n        font-size:16px; color:#333; text-align:center;\r\n        background-color: #efeff4;\r\n        border-bottom:1px solid #e8e8e8;\r\n    }\r\n</style>\r\n\r\n<template>\r\n    <div class=\"sub-page\">\r\n        <mt-header title=\"无限滚动\">\r\n            <router-link to=\"/\" slot=\"left\">\r\n                <mt-button icon=\"back\">返回</mt-button>\r\n            </router-link>\r\n        </mt-header>\r\n        <div class=\"mt-scroll-body\">\r\n            <ul class=\"infinite-box\"\r\n                v-infinite-scroll=\"loadMore\"\r\n                infinite-scroll-disabled=\"loading\"\r\n                infinite-scroll-distance=\"10\">\r\n                <li class=\"item\" v-for=\"item of items\">{{item.name}}</li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n    import Mock from \"mockjs\";\r\n    import Vue from \"vue\";\r\n    import { InfiniteScroll, Header, Button } from 'mint-ui';\r\n    Vue.use(InfiniteScroll);\r\n    Vue.component(Header.name, Header);\r\n    Vue.component(Button.name, Button);\r\n\r\n    import zepto from \"zepto\";\r\n\r\n    export default{\r\n        data:function(){\r\n            return {\r\n                items:[],\r\n                recordNo:0,\r\n                loading:false,\r\n                groupHeight:205\r\n            }\r\n        },\r\n        methods:{\r\n            loadMore:function(){\r\n                var self = this;\r\n                var initNo = Math.ceil($(\".mt-scroll-body\").height() / self.groupHeight) * 5;\r\n                self.loading = true;\r\n                setTimeout(function(){\r\n                    Mock.Random.city(true);\r\n                    var data = Mock.mock({\r\n                        \"array|5\": [\r\n                            {\r\n                                \"name\":'@city'\r\n                            }\r\n                        ]\r\n                    });\r\n                    if(self.recordNo < 35){\r\n                        self.items = self.items.concat(data.array);\r\n                        self.recordNo += 5;\r\n                        if(self.recordNo < initNo){\r\n                            self.loadMore();\r\n                        }\r\n                    }\r\n                    self.loading = false;\r\n                },1000);\r\n            }\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
+	exports.push([module.id, "\n.sub-page{\n    overflow: hidden !important;\n}\n.item{\n    width: 100%; line-height:40px;\n    font-size:16px; color:#333; text-align:center;\n    background-color: #efeff4;\n    border-bottom:1px solid #e8e8e8;\n}\n", "", {"version":3,"sources":["/./src/js/example/infinite.vue?06d09ae2"],"names":[],"mappings":";AACA;IACA,4BAAA;CACA;AACA;IACA,YAAA,CAAA,iBAAA;IACA,eAAA,CAAA,WAAA,CAAA,kBAAA;IACA,0BAAA;IACA,gCAAA;CACA","file":"infinite.vue","sourcesContent":["<style>\r\n    .sub-page{\r\n        overflow: hidden !important;\r\n    }\r\n    .item{\r\n        width: 100%; line-height:40px;\r\n        font-size:16px; color:#333; text-align:center;\r\n        background-color: #efeff4;\r\n        border-bottom:1px solid #e8e8e8;\r\n    }\r\n</style>\r\n\r\n<template>\r\n    <div class=\"sub-page\">\r\n        <mt-header title=\"无限滚动\">\r\n            <router-link to=\"/\" slot=\"left\">\r\n                <mt-button icon=\"back\">返回</mt-button>\r\n            </router-link>\r\n        </mt-header>\r\n        <div class=\"mt-scroll-body\">\r\n            <ul infinite-scroll-immediate-check=\"false\"\r\n                v-infinite-scroll=\"loadMore\"\r\n                infinite-scroll-disabled=\"loading\"\r\n                infinite-scroll-distance=\"10\">\r\n                <li class=\"item\" v-for=\"item of items\">{{item.name}}</li>\r\n            </ul>\r\n            <div style=\"height: 50px;\">\r\n                <infinite-loading v-if=\"loading\"></infinite-loading>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</template>\r\n\r\n<script>\r\n    import Mock from \"mockjs\";\r\n    import Vue from \"vue\";\r\n    import { InfiniteScroll, Header, Button } from 'mint-ui';\r\n    Vue.use(InfiniteScroll);\r\n    Vue.component(Header.name, Header);\r\n    Vue.component(Button.name, Button);\r\n\r\n    import infiniteLoading from '../components/common/infinite-loading.vue';\r\n\r\n    import zepto from \"zepto\";\r\n\r\n    export default{\r\n        components:{\r\n            'infinite-loading':infiniteLoading\r\n        },\r\n        data:function(){\r\n            return {\r\n                items:[],\r\n                recordNo:0,\r\n                loading:false,\r\n                groupHeight:205\r\n            }\r\n        },\r\n        methods:{\r\n            loadMore:function(){\r\n                var self = this;\r\n                var initNo = Math.ceil($(\".mt-scroll-body\").height() / self.groupHeight) * 5;\r\n                self.loading = true;\r\n                setTimeout(function(){\r\n                    Mock.Random.city(true);\r\n                    var data = Mock.mock({\r\n                        \"array|5\": [\r\n                            {\r\n                                \"name\":'@city'\r\n                            }\r\n                        ]\r\n                    });\r\n                    if(self.recordNo < 35){\r\n                        self.items = self.items.concat(data.array);\r\n                        self.recordNo += 5;\r\n                        if(self.recordNo < initNo){\r\n                            self.loadMore();\r\n                        }\r\n                    }\r\n                    self.loading = false;\r\n                },1000);\r\n            }\r\n        },\r\n        mounted:function(){\r\n            var self = this;\r\n            self.$nextTick(function(){\r\n                var initNo = Math.ceil($(\".mt-scroll-body\").height() / self.groupHeight) * 5;\r\n                function fn(){\r\n                    if(self.recordNo >= initNo) return;\r\n                    self.loading = true;\r\n                    Mock.Random.city(true);\r\n                    var data = Mock.mock({\r\n                        \"array|5\": [\r\n                            {\r\n                                \"name\":'@city'\r\n                            }\r\n                        ]\r\n                    });\r\n                    self.items = self.items.concat(data.array);\r\n                    self.recordNo += 5;\r\n                    self.loading = false;\r\n                    fn();\r\n                }\r\n                fn();\r\n            });\r\n        }\r\n    }\r\n</script>"],"sourceRoot":"webpack://"}]);
 	
 	// exports
 
@@ -9796,6 +9796,10 @@ webpackJsonp([3],{
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
+	var _infiniteLoading = __webpack_require__(417);
+	
+	var _infiniteLoading2 = _interopRequireDefault(_infiniteLoading);
+	
 	var _zepto = __webpack_require__(7);
 	
 	var _zepto2 = _interopRequireDefault(_zepto);
@@ -9832,12 +9836,18 @@ webpackJsonp([3],{
 	//
 	//
 	//
+	//
+	//
+	//
 	
 	_vue2.default.use(_infiniteScroll2.default);
 	_vue2.default.component(_header2.default.name, _header2.default);
 	_vue2.default.component(_button2.default.name, _button2.default);
 	
 	exports.default = {
+	    components: {
+	        'infinite-loading': _infiniteLoading2.default
+	    },
 	    data: function data() {
 	        return {
 	            items: [],
@@ -9868,6 +9878,27 @@ webpackJsonp([3],{
 	                self.loading = false;
 	            }, 1000);
 	        }
+	    },
+	    mounted: function mounted() {
+	        var self = this;
+	        self.$nextTick(function () {
+	            var initNo = Math.ceil($(".mt-scroll-body").height() / self.groupHeight) * 5;
+	            function fn() {
+	                if (self.recordNo >= initNo) return;
+	                self.loading = true;
+	                _mockjs2.default.Random.city(true);
+	                var data = _mockjs2.default.mock({
+	                    "array|5": [{
+	                        "name": '@city'
+	                    }]
+	                });
+	                self.items = self.items.concat(data.array);
+	                self.recordNo += 5;
+	                self.loading = false;
+	                fn();
+	            }
+	            fn();
+	        });
 	    }
 	};
 
@@ -9888,8 +9919,8 @@ webpackJsonp([3],{
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./../../../css-loader/index.js!./style.css");
+			module.hot.accept("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10283,8 +10314,8 @@ webpackJsonp([3],{
 	      value: (_vm.loadMore),
 	      expression: "loadMore"
 	    }],
-	    staticClass: "infinite-box",
 	    attrs: {
+	      "infinite-scroll-immediate-check": "false",
 	      "infinite-scroll-disabled": "loading",
 	      "infinite-scroll-distance": "10"
 	    }
@@ -10292,12 +10323,810 @@ webpackJsonp([3],{
 	    return _vm._h('li', {
 	      staticClass: "item"
 	    }, [_vm._s(item.name)])
-	  })])])])
+	  })]), " ", _vm._h('div', {
+	    staticStyle: {
+	      "height": "50px"
+	    }
+	  }, [(_vm.loading) ? _vm._h('infinite-loading') : _vm._e()])])])
 	},staticRenderFns: []}
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-c0b4a7f2", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-732e34f4", module.exports)
+	  }
+	}
+
+/***/ },
+
+/***/ 414:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(415);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(382)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../../../.npminstall/css-loader/0.25.0/css-loader/index.js!./style.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 415:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(381)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "\n.mint-spinner-fading-circle {\n    position: relative\n}\n.mint-spinner-fading-circle-circle {\n    width: 100%;\n    height: 100%;\n    top: 0;\n    left: 0;\n    position: absolute\n}\n.mint-spinner-fading-circle-circle::before {\n    content: \" \";\n    display: block;\n    margin: 0 auto;\n    width: 15%;\n    height: 15%;\n    border-radius: 100%;\n    -webkit-animation: mint-fading-circle 1.2s infinite ease-in-out both;\n            animation: mint-fading-circle 1.2s infinite ease-in-out both\n}\n.mint-spinner-fading-circle-circle.is-circle2 {\n    -webkit-transform: rotate(30deg);\n            transform: rotate(30deg)\n}\n.mint-spinner-fading-circle-circle.is-circle2::before {\n    -webkit-animation-delay: -1.1s;\n            animation-delay: -1.1s\n}\n.mint-spinner-fading-circle-circle.is-circle3 {\n    -webkit-transform: rotate(60deg);\n            transform: rotate(60deg)\n}\n.mint-spinner-fading-circle-circle.is-circle3::before {\n    -webkit-animation-delay: -1s;\n            animation-delay: -1s\n}\n.mint-spinner-fading-circle-circle.is-circle4 {\n    -webkit-transform: rotate(90deg);\n            transform: rotate(90deg)\n}\n.mint-spinner-fading-circle-circle.is-circle4::before {\n    -webkit-animation-delay: -0.9s;\n            animation-delay: -0.9s\n}\n.mint-spinner-fading-circle-circle.is-circle5 {\n    -webkit-transform: rotate(120deg);\n            transform: rotate(120deg)\n}\n.mint-spinner-fading-circle-circle.is-circle5::before {\n    -webkit-animation-delay: -0.8s;\n            animation-delay: -0.8s\n}\n.mint-spinner-fading-circle-circle.is-circle6 {\n    -webkit-transform: rotate(150deg);\n            transform: rotate(150deg)\n}\n.mint-spinner-fading-circle-circle.is-circle6::before {\n    -webkit-animation-delay: -0.7s;\n            animation-delay: -0.7s\n}\n.mint-spinner-fading-circle-circle.is-circle7 {\n    -webkit-transform: rotate(180deg);\n            transform: rotate(180deg)\n}\n.mint-spinner-fading-circle-circle.is-circle7::before {\n    -webkit-animation-delay: -0.6s;\n            animation-delay: -0.6s\n}\n.mint-spinner-fading-circle-circle.is-circle8 {\n    -webkit-transform: rotate(210deg);\n            transform: rotate(210deg)\n}\n.mint-spinner-fading-circle-circle.is-circle8::before {\n    -webkit-animation-delay: -0.5s;\n            animation-delay: -0.5s\n}\n.mint-spinner-fading-circle-circle.is-circle9 {\n    -webkit-transform: rotate(240deg);\n            transform: rotate(240deg)\n}\n.mint-spinner-fading-circle-circle.is-circle9::before {\n    -webkit-animation-delay: -0.4s;\n            animation-delay: -0.4s\n}\n.mint-spinner-fading-circle-circle.is-circle10 {\n    -webkit-transform: rotate(270deg);\n            transform: rotate(270deg)\n}\n.mint-spinner-fading-circle-circle.is-circle10::before {\n    -webkit-animation-delay: -0.3s;\n            animation-delay: -0.3s\n}\n.mint-spinner-fading-circle-circle.is-circle11 {\n    -webkit-transform: rotate(300deg);\n            transform: rotate(300deg)\n}\n.mint-spinner-fading-circle-circle.is-circle11::before {\n    -webkit-animation-delay: -0.2s;\n            animation-delay: -0.2s\n}\n.mint-spinner-fading-circle-circle.is-circle12 {\n    -webkit-transform: rotate(330deg);\n            transform: rotate(330deg)\n}\n.mint-spinner-fading-circle-circle.is-circle12::before {\n    -webkit-animation-delay: -0.1s;\n            animation-delay: -0.1s\n}\n@-webkit-keyframes mint-fading-circle {\n    0%, 39%, 100% {\n        opacity: 0\n    }\n    40% {\n        opacity: 1\n    }\n}\n@keyframes mint-fading-circle {\n    0%, 39%, 100% {\n        opacity: 0\n    }\n    40% {\n        opacity: 1\n    }\n}\n\n.mint-spinner-snake {\n  -webkit-animation: mint-spinner-rotate 0.8s infinite linear;\n          animation: mint-spinner-rotate 0.8s infinite linear;\n  border: 4px solid transparent;\n  border-radius: 50%;\n}\n@-webkit-keyframes mint-spinner-rotate {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n@keyframes mint-spinner-rotate {\n0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n}\n100% {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg);\n}\n}\n\n.mint-spinner-double-bounce {\nposition: relative;\n}\n.mint-spinner-double-bounce-bounce1, .mint-spinner-double-bounce-bounce2 {\nwidth: 100%;\nheight: 100%;\nborder-radius: 50%;\nopacity: 0.6;\nposition: absolute;\ntop: 0;\nleft: 0;\n-webkit-animation: mint-spinner-double-bounce 2.0s infinite ease-in-out;\n        animation: mint-spinner-double-bounce 2.0s infinite ease-in-out;\n}\n.mint-spinner-double-bounce-bounce2 {\n-webkit-animation-delay: -1.0s;\n        animation-delay: -1.0s;\n}\n@-webkit-keyframes mint-spinner-double-bounce {\n0%, 100% {\n    -webkit-transform: scale(0.0);\n            transform: scale(0.0);\n}\n50% {\n    -webkit-transform: scale(1.0);\n            transform: scale(1.0);\n}\n}\n@keyframes mint-spinner-double-bounce {\n0%, 100% {\n    -webkit-transform: scale(0.0);\n            transform: scale(0.0);\n}\n50% {\n    -webkit-transform: scale(1.0);\n            transform: scale(1.0);\n}\n}\n\n.mint-spinner-triple-bounce {}\n.mint-spinner-triple-bounce-bounce1, .mint-spinner-triple-bounce-bounce2, .mint-spinner-triple-bounce-bounce3 {\nborder-radius: 100%;\ndisplay: inline-block;\n-webkit-animation: mint-spinner-triple-bounce 1.4s infinite ease-in-out both;\n        animation: mint-spinner-triple-bounce 1.4s infinite ease-in-out both;\n}\n.mint-spinner-triple-bounce-bounce1 {\n-webkit-animation-delay: -0.32s;\n        animation-delay: -0.32s;\n}\n.mint-spinner-triple-bounce-bounce2 {\n-webkit-animation-delay: -0.16s;\n        animation-delay: -0.16s;\n}\n@-webkit-keyframes mint-spinner-triple-bounce {\n0%, 80%, 100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n}\n40% {\n    -webkit-transform: scale(1.0);\n            transform: scale(1.0);\n}\n}\n@keyframes mint-spinner-triple-bounce {\n0%, 80%, 100% {\n    -webkit-transform: scale(0);\n            transform: scale(0);\n}\n40% {\n    -webkit-transform: scale(1.0);\n            transform: scale(1.0);\n}\n}\n", ""]);
+	
+	// exports
+
+
+/***/ },
+
+/***/ 416:
+/***/ function(module, exports) {
+
+	module.exports =
+	/******/ (function(modules) { // webpackBootstrap
+	/******/ 	// The module cache
+	/******/ 	var installedModules = {};
+	
+	/******/ 	// The require function
+	/******/ 	function __webpack_require__(moduleId) {
+	
+	/******/ 		// Check if module is in cache
+	/******/ 		if(installedModules[moduleId])
+	/******/ 			return installedModules[moduleId].exports;
+	
+	/******/ 		// Create a new module (and put it into the cache)
+	/******/ 		var module = installedModules[moduleId] = {
+	/******/ 			i: moduleId,
+	/******/ 			l: false,
+	/******/ 			exports: {}
+	/******/ 		};
+	
+	/******/ 		// Execute the module function
+	/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+	
+	/******/ 		// Flag the module as loaded
+	/******/ 		module.l = true;
+	
+	/******/ 		// Return the exports of the module
+	/******/ 		return module.exports;
+	/******/ 	}
+	
+	
+	/******/ 	// expose the modules object (__webpack_modules__)
+	/******/ 	__webpack_require__.m = modules;
+	
+	/******/ 	// expose the module cache
+	/******/ 	__webpack_require__.c = installedModules;
+	
+	/******/ 	// identity function for calling harmory imports with the correct context
+	/******/ 	__webpack_require__.i = function(value) { return value; };
+	
+	/******/ 	// define getter function for harmory exports
+	/******/ 	__webpack_require__.d = function(exports, name, getter) {
+	/******/ 		Object.defineProperty(exports, name, {
+	/******/ 			configurable: false,
+	/******/ 			enumerable: true,
+	/******/ 			get: getter
+	/******/ 		});
+	/******/ 	};
+	
+	/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+	/******/ 	__webpack_require__.n = function(module) {
+	/******/ 		var getter = module && module.__esModule ?
+	/******/ 			function getDefault() { return module['default']; } :
+	/******/ 			function getModuleExports() { return module; };
+	/******/ 		__webpack_require__.d(getter, 'a', getter);
+	/******/ 		return getter;
+	/******/ 	};
+	
+	/******/ 	// Object.prototype.hasOwnProperty.call
+	/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+	
+	/******/ 	// __webpack_public_path__
+	/******/ 	__webpack_require__.p = "";
+	
+	/******/ 	// Load entry module and return exports
+	/******/ 	return __webpack_require__(__webpack_require__.s = 232);
+	/******/ })
+	/************************************************************************/
+	/******/ ({
+	
+	/***/ 11:
+	/***/ function(module, exports) {
+	
+	// removed by extract-text-webpack-plugin
+	
+	/***/ },
+	
+	/***/ 110:
+	/***/ function(module, exports) {
+	
+	// removed by extract-text-webpack-plugin
+	
+	/***/ },
+	
+	/***/ 117:
+	/***/ function(module, exports) {
+	
+	// removed by extract-text-webpack-plugin
+	
+	/***/ },
+	
+	/***/ 12:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(11)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(8)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(13)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+	
+	
+	/***/ },
+	
+	/***/ 122:
+	/***/ function(module, exports) {
+	
+	// removed by extract-text-webpack-plugin
+	
+	/***/ },
+	
+	/***/ 13:
+	/***/ function(module, exports) {
+	
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    class: ['mint-spinner-fading-circle circle-color-' + _uid],
+	    style: ({
+	      width: spinnerSize,
+	      height: spinnerSize
+	    })
+	  }, [_l((12), function(n) {
+	    return _h('div', {
+	      staticClass: "mint-spinner-fading-circle-circle",
+	      class: ['is-circle' + (n + 1)]
+	    })
+	  })])
+	}},staticRenderFns: []}
+	
+	/***/ },
+	
+	/***/ 151:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(73)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(163)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+	
+	
+	/***/ },
+	
+	/***/ 152:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(117)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(74)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(187)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+	
+	
+	/***/ },
+	
+	/***/ 153:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(122)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(75)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(192)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+	
+	
+	/***/ },
+	
+	/***/ 154:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	var __vue_exports__, __vue_options__
+	
+	/* styles */
+	__webpack_require__(110)
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(76)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(181)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	module.exports = __vue_exports__
+	
+	
+	/***/ },
+	
+	/***/ 163:
+	/***/ function(module, exports) {
+	
+	module.exports={render:function (){with(this) {
+	  return _h('span', [_h(spinner, {
+	    tag: "component"
+	  })])
+	}},staticRenderFns: []}
+	
+	/***/ },
+	
+	/***/ 181:
+	/***/ function(module, exports) {
+	
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mint-spinner-triple-bounce"
+	  }, [_h('div', {
+	    staticClass: "mint-spinner-triple-bounce-bounce1",
+	    style: (bounceStyle)
+	  }), " ", _h('div', {
+	    staticClass: "mint-spinner-triple-bounce-bounce2",
+	    style: (bounceStyle)
+	  }), " ", _h('div', {
+	    staticClass: "mint-spinner-triple-bounce-bounce3",
+	    style: (bounceStyle)
+	  })])
+	}},staticRenderFns: []}
+	
+	/***/ },
+	
+	/***/ 187:
+	/***/ function(module, exports) {
+	
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mint-spinner-double-bounce",
+	    style: ({
+	      width: spinnerSize,
+	      height: spinnerSize
+	    })
+	  }, [_h('div', {
+	    staticClass: "mint-spinner-double-bounce-bounce1",
+	    style: ({
+	      backgroundColor: spinnerColor
+	    })
+	  }), " ", _h('div', {
+	    staticClass: "mint-spinner-double-bounce-bounce2",
+	    style: ({
+	      backgroundColor: spinnerColor
+	    })
+	  })])
+	}},staticRenderFns: []}
+	
+	/***/ },
+	
+	/***/ 192:
+	/***/ function(module, exports) {
+	
+	module.exports={render:function (){with(this) {
+	  return _h('div', {
+	    staticClass: "mint-spinner-snake",
+	    style: ({
+	      'border-top-color': spinnerColor,
+	      'border-left-color': spinnerColor,
+	      'border-bottom-color': spinnerColor,
+	      'height': spinnerSize,
+	      'width': spinnerSize
+	    })
+	  })
+	}},staticRenderFns: []}
+	
+	/***/ },
+	
+	/***/ 232:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	module.exports = __webpack_require__(40);
+	
+	
+	/***/ },
+	
+	/***/ 4:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	var __vue_exports__, __vue_options__
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(7)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	
+	
+	module.exports = __vue_exports__
+	
+	
+	/***/ },
+	
+	/***/ 40:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_spinner__ = __webpack_require__(151);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_spinner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_spinner__);
+	
+	
+	__WEBPACK_IMPORTED_MODULE_0__src_spinner___default.a.install = function(Vue) {
+	  Vue.component(__WEBPACK_IMPORTED_MODULE_0__src_spinner___default.a.name, __WEBPACK_IMPORTED_MODULE_0__src_spinner___default.a);
+	};
+	
+	module.exports = __WEBPACK_IMPORTED_MODULE_0__src_spinner___default.a;
+	
+	
+	/***/ },
+	
+	/***/ 7:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	
+	/* harmony default export */ exports["default"] = {
+	  computed: {
+	    spinnerColor: function spinnerColor() {
+	      return this.color || this.$parent.color || '#ccc';
+	    },
+	
+	    spinnerSize: function spinnerSize() {
+	      return (this.size || this.$parent.size || 28) + 'px';
+	    }
+	  },
+	
+	  props: {
+	    size: Number,
+	    color: String
+	  }
+	};
+	
+	
+	/***/ },
+	
+	/***/ 73:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	//
+	//
+	//
+	//
+	
+	var SPINNERS = [
+	  'snake',
+	  'double-bounce',
+	  'triple-bounce',
+	  'fading-circle'
+	];
+	var parseSpinner = function(index) {
+	  if ({}.toString.call(index) === '[object Number]') {
+	    if (SPINNERS.length <= index) {
+	      console.warn(("'" + index + "' spinner not found, use the default spinner."));
+	      index = 0;
+	    }
+	    return SPINNERS[index];
+	  }
+	
+	  if (SPINNERS.indexOf(index) === -1) {
+	    console.warn(("'" + index + "' spinner not found, use the default spinner."));
+	    index = SPINNERS[0];
+	  }
+	  return index;
+	};
+	
+	/**
+	 * mt-spinner
+	 * @module components/spinner
+	 * @desc 加载动画
+	 * @param {(string|number)} [type=snake] - 显示类型，传入类型名或者类型 id，可选 `snake`, `dobule-bounce`, `triple-bounce`, `fading-circle`
+	 * @param {number} size - 尺寸
+	 * @param {string} color - 颜色
+	 *
+	 * @example
+	 * <mt-spinner type="snake"></mt-spinner>
+	 *
+	 * <!-- double-bounce -->
+	 * <mt-spinner :type="1"></mt-spinner>
+	 *
+	 * <!-- default snake -->
+	 * <mt-spinner :size="30" color="#999"></mt-spinner>
+	 */
+	/* harmony default export */ exports["default"] = {
+	  name: 'mt-spinner',
+	
+	  computed: {
+	    spinner: function spinner() {
+	      return ("spinner-" + (parseSpinner(this.type)));
+	    }
+	  },
+	
+	  components: {
+	    SpinnerSnake: __webpack_require__(153),
+	    SpinnerDoubleBounce: __webpack_require__(152),
+	    SpinnerTripleBounce: __webpack_require__(154),
+	    SpinnerFadingCircle: __webpack_require__(12)
+	  },
+	
+	  props: {
+	    type: {
+	      default: 0
+	    },
+	    size: {
+	      type: Number,
+	      default: 28
+	    },
+	    color: {
+	      type: String,
+	      default: '#ccc'
+	    }
+	  }
+	};
+	
+	
+	/***/ },
+	
+	/***/ 74:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue__ = __webpack_require__(4);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_vue__);
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	
+	
+	/* harmony default export */ exports["default"] = {
+	  name: 'double-bounce',
+	
+	  mixins: [__WEBPACK_IMPORTED_MODULE_0__common_vue___default.a]
+	};
+	
+	
+	/***/ },
+	
+	/***/ 75:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue__ = __webpack_require__(4);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_vue__);
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	
+	
+	/* harmony default export */ exports["default"] = {
+	  name: 'snake',
+	
+	  mixins: [__WEBPACK_IMPORTED_MODULE_0__common_vue___default.a]
+	};
+	
+	
+	/***/ },
+	
+	/***/ 76:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue__ = __webpack_require__(4);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_vue__);
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	
+	
+	/* harmony default export */ exports["default"] = {
+	  name: 'triple-bounce',
+	
+	  mixins: [__WEBPACK_IMPORTED_MODULE_0__common_vue___default.a],
+	
+	  computed: {
+	    spinnerSize: function spinnerSize() {
+	      return ((this.size || this.$parent.size || 28) / 3) + 'px';
+	    },
+	
+	    bounceStyle: function bounceStyle() {
+	      return {
+	        width: this.spinnerSize,
+	        height: this.spinnerSize,
+	        backgroundColor: this.spinnerColor
+	      };
+	    }
+	  }
+	};
+	
+	
+	/***/ },
+	
+	/***/ 8:
+	/***/ function(module, exports, __webpack_require__) {
+	
+	"use strict";
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue__ = __webpack_require__(4);
+	/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__common_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__common_vue__);
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	
+	
+	/* harmony default export */ exports["default"] = {
+	  name: 'fading-circle',
+	
+	  mixins: [__WEBPACK_IMPORTED_MODULE_0__common_vue___default.a],
+	
+	  created: function created() {
+	    this.styleNode = document.createElement('style');
+	    var css = ".circle-color-" + (this._uid) + " > div::before { background-color: " + (this.spinnerColor) + "; }";
+	
+	    this.styleNode.type = 'text/css';
+	    this.styleNode.rel = 'stylesheet';
+	    this.styleNode.title = 'fading circle style';
+	    document.getElementsByTagName('head')[0].appendChild(this.styleNode);
+	    this.styleNode.appendChild(document.createTextNode(css));
+	  },
+	
+	  destroyed: function destroyed() {
+	    if (this.styleNode) {
+	      this.styleNode.parentNode.removeChild(this.styleNode);
+	    }
+	  }
+	};
+	
+	
+	/***/ }
+	
+	/******/ });
+
+/***/ },
+
+/***/ 417:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(418)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(419)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "E:\\xampp\\htdocs\\gitstore\\vue-comp\\src\\js\\components\\common\\infinite-loading.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-2287e8bc", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-2287e8bc", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] infinite-loading.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+
+/***/ 418:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _style = __webpack_require__(414);
+	
+	var _style2 = _interopRequireDefault(_style);
+	
+	var _spinner = __webpack_require__(416);
+	
+	var _spinner2 = _interopRequireDefault(_spinner);
+	
+	var _vue = __webpack_require__(1);
+	
+	var _vue2 = _interopRequireDefault(_vue);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	_vue2.default.component(_spinner2.default.name, _spinner2.default); //
+	//
+	//
+	//
+	//
+	//
+	
+	exports.default = {};
+
+/***/ },
+
+/***/ 419:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;
+	  return _vm._h('div', {
+	    staticClass: "infinite-spinner"
+	  }, [_vm._h('mt-spinner', {
+	    attrs: {
+	      "type": "fading-circle"
+	    }
+	  })])
+	},staticRenderFns: []}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-2287e8bc", module.exports)
 	  }
 	}
 

@@ -144,20 +144,20 @@ webpackJsonp([0],{
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "D:\\code\\php\\htdocs\\vue-comp\\vue-comp\\src\\js\\components\\common\\solid-button.vue"
+	__vue_options__.__file = "E:\\xampp\\htdocs\\gitstore\\vue-comp\\src\\js\\components\\common\\solid-button.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
 	/* hot reload */
 	if (false) {(function () {
-	  var hotAPI = require("vue-hot-reload-api")
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-622594a0", __vue_options__)
+	    hotAPI.createRecord("data-v-28417acd", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-622594a0", __vue_options__)
+	    hotAPI.reload("data-v-28417acd", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] solid-button.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -287,7 +287,7 @@ webpackJsonp([0],{
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-622594a0", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-28417acd", module.exports)
 	  }
 	}
 
@@ -315,20 +315,20 @@ webpackJsonp([0],{
 	if (typeof __vue_options__ === "function") {
 	  __vue_options__ = __vue_options__.options
 	}
-	__vue_options__.__file = "D:\\code\\php\\htdocs\\vue-comp\\vue-comp\\src\\js\\components\\common\\page-loading.vue"
+	__vue_options__.__file = "E:\\xampp\\htdocs\\gitstore\\vue-comp\\src\\js\\components\\common\\page-loading.vue"
 	__vue_options__.render = __vue_template__.render
 	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 	
 	/* hot reload */
 	if (false) {(function () {
-	  var hotAPI = require("vue-hot-reload-api")
+	  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  module.hot.accept()
 	  if (!module.hot.data) {
-	    hotAPI.createRecord("data-v-8d0059ec", __vue_options__)
+	    hotAPI.createRecord("data-v-7f9bb937", __vue_options__)
 	  } else {
-	    hotAPI.reload("data-v-8d0059ec", __vue_options__)
+	    hotAPI.reload("data-v-7f9bb937", __vue_options__)
 	  }
 	})()}
 	if (__vue_options__.functional) {console.error("[vue-loader] page-loading.vue: functional components are not supported and should be defined in plain js files using render functions.")}
@@ -431,7 +431,7 @@ webpackJsonp([0],{
 	if (false) {
 	  module.hot.accept()
 	  if (module.hot.data) {
-	     require("vue-hot-reload-api").rerender("data-v-8d0059ec", module.exports)
+	     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-7f9bb937", module.exports)
 	  }
 	}
 
