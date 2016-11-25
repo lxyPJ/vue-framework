@@ -1,13 +1,14 @@
 <style scoped>
     .lazy-img{
+        position: relative;
         width: 100%; height:4.49275362rem;
     }
     .lazy-img img{
+        position: absolute; top:0; left:0;
         width: 100%; height:100%;
     }
-    image[lazy=loading]{
-        width: 40px; height:100%;
-        margin: auto;
+    img[lazy=loading]{
+        background-color:#ccc;
     }
 </style>
 
@@ -20,7 +21,8 @@
                 </router-link>
             </mt-header>
             <ul>
-                <li class="lazy-img" v-for="src of list">
+                <li class="lazy-img flex-cd" v-for="src of list">
+                    <mt-spinner type="snake"></mt-spinner>
                     <img v-lazy.lazycontr="src" />
                 </li>
             </ul>
@@ -30,10 +32,11 @@
 
 <script>
     import Vue from "vue";
-    import { Lazyload, Header, Button } from "mint-ui";
+    import { Lazyload, Header, Button, Spinner } from "mint-ui";
     Vue.use(Lazyload);
     Vue.component(Header.name, Header);
     Vue.component(Button.name, Button);
+    Vue.component(Spinner.name, Spinner);
 
     export default {
         data:function(){

@@ -309,3 +309,9 @@
     -webkit-order:1;
     order:1;
 }
+
+.flex-cd{
+    @extend .flex-box;
+    @extend .flex-center;
+    @extend .flex-middle;
+}

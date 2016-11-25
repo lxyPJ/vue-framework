@@ -58,7 +58,6 @@
         methods:{
             loadMore:function(){
                 var self = this;
-                var initNo = Math.ceil($(".mt-scroll-body").height() / self.groupHeight) * 5;
                 self.loading = true;
                 setTimeout(function(){
                     Mock.Random.city(true);
@@ -72,9 +71,6 @@
                     if(self.recordNo < 35){
                         self.items = self.items.concat(data.array);
                         self.recordNo += 5;
-                        if(self.recordNo < initNo){
-                            self.loadMore();
-                        }
                     }
                     self.loading = false;
                 },1000);
