@@ -25,6 +25,11 @@ const infinite = resolve => {
         resolve(require('./example/infinite.vue'));
     })
 };
+const lazyLoad = resolve => {
+    require.ensure([],() => {
+        resolve(require('./example/lazy-load.vue'));
+    })
+};
 //定义路由
 const routes = [
     {
@@ -38,6 +43,10 @@ const routes = [
     {
         path:'/infinite',
         component:infinite
+    },
+    {
+        path:'/lazyload',
+        component:lazyLoad
     }
 ];
 const router = new VueRouter({
