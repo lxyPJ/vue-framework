@@ -9,7 +9,9 @@ var config = {
             "babel-polyfill",
             "vue",
             "vue-router",
-            "vuex"
+            "vuex",
+            "zepto",
+            //"ajaxRequest"
         ],
         app:"./src/js/app.js"
     },
@@ -34,7 +36,6 @@ var config = {
             {
                 test: /\.css$/,
                 loader:'style!css'
-                //loader: ExtractTextPlugin.extract("style-loader","css-loader")
             },
             {
                 test:/\.vue$/,
@@ -46,7 +47,9 @@ var config = {
     resolve : {
         extensions : ['','.js','.jsx'],
         alias:{
-            'vue$':'vue/dist/vue.js'
+            'vue$':'vue/dist/vue.js',
+            'zepto':path.join(__dirname, './src/js/vendor/zepto.js'),
+            'ajaxRequest':path.join(__dirname, './src/js/modules/ajaxRequest.js')
         }
     },
     plugins:[

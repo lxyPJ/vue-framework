@@ -1,6 +1,7 @@
 <template>
-    <div class="page-loading-wrap" v-if="loading">
-        <div class="page-loading">
+    <div class="btn-wrap">
+        <button class="btn">{{text}}</button>
+        <div class="btn-loading" :style="dsStyle">
             <div class="spinner">
                 <div class="spinner-container container1">
                     <div class="circle1"></div>
@@ -26,11 +27,31 @@
 </template>
 
 <script>
+    import zepto from "zepto";
+
     export default{
-        computed:{
-            loading:function(){
-                return this.$store.state.pageLoading;
+        props:{
+            text:{
+                type:String,
+                required:true
             }
+        },
+        data:function(){
+            return {
+                dsStyle:{
+                    display:'none'
+                }
+            }
+        },
+        mounted:function(){
+            this.$nextTick(function(){
+                //按钮hover
+                $(".btn").on('touchstart',function(){
+                    $(this).addClass('btn-hover');
+                }).on('touchend',function(){
+                    $(this).removeClass('btn-hover');
+                });
+            });
         }
     }
 </script>

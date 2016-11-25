@@ -1,5 +1,4 @@
 var zepto = require('zepto');
-var dialog = require('dialog');
 
 import {baseUrl} from 'constant';
 

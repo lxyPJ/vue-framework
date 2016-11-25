@@ -1,3 +1,15 @@
+//组件过度效果
+.slide-enter-active {
+  transition: all .4s;
+}
+.slide-leave-active {
+  transition: all .4s;
+}
+.slide-enter,
+.slide-leave-active{
+  transform:translate3d(100%,0,0);
+}
+
 //基础样式
 @import "./base/common";
 
@@ -14,8 +26,11 @@
 
 
 //组件
+@import "./components/spinner";
 @import "./components/banner";
 @import "./components/button";
+@import "./components/page-loading";
+@import "./components/load-more";
 
 //布局
 @import "./layout/header";

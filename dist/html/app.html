@@ -11,7 +11,7 @@
         .page .scroll-body{
             padding:10px;
         }
-        .page .mint-button{
+        .page .btn-wrap{
             width: 100%;
             margin-bottom: 10px;
         }
@@ -23,11 +23,22 @@
             <div class="page">
                 <div class="scroll-body">
                     <router-link to="swipe">
-                        <mt-button type="primary">轮播图</mt-button>
+                        <solid-button text="轮播图"></solid-button>
+                    </router-link>
+                    <router-link to="loadMore">
+                        <solid-button text="加载更多"></solid-button>
+                    </router-link>
+                    <router-link to="infinite">
+                        <solid-button text="无限滚动"></solid-button>
                     </router-link>
                 </div>
             </div>
-            <router-view></router-view>
+            <transition name="slide">
+                <keep-alive>
+                    <router-view></router-view>
+                </keep-alive>
+            </transition>
+            <page-loading></page-loading>
         </div>
     </div>
 </body>

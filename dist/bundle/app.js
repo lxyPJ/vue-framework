@@ -1,1 +1,441 @@
-webpackJsonp([0],{0:function(A,exports,t){"use strict";function s(A){return A&&A.__esModule?A:{default:A}}var e=t(1),n=(s(e),t(5)),i=s(n),o=t(8),r=s(o),B=t(9),C=s(B);t(10),r.default.use(C.default),r.default.component(i.default.name,i.default);var a=function(A){t.e(1,function(){A(t(307))})},w=[{path:"/swipe",component:a}],g=new C.default({routes:w});new r.default({router:g}).$mount("#view")},1:[320,2],2:function(A,exports,t){exports=A.exports=t(3)(),exports.push([A.id,'.mint-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:4px;border:0;box-sizing:border-box;color:inherit;display:block;font-size:18px;height:41px;outline:0;overflow:hidden;position:relative;text-align:center}.mint-button:after{background-color:#000;content:" ";opacity:0;top:0;right:0;bottom:0;left:0;position:absolute}.mint-button:not(.is-disabled):active:after{opacity:.4}.mint-button.is-disabled{opacity:.6}.mint-button-icon{vertical-align:middle;display:inline-block}.mint-button--default{color:#656b79;background-color:#f6f8fa;box-shadow:0 0 1px #b8bbbf}.mint-button--default.is-plain{border:1px solid #5a5a5a;background-color:transparent;box-shadow:none;color:#5a5a5a}.mint-button--primary{color:#fff;background-color:#26a2ff}.mint-button--primary.is-plain{border:1px solid #26a2ff;background-color:transparent;color:#26a2ff}.mint-button--danger{color:#fff;background-color:#ef4f4f}.mint-button--danger.is-plain{border:1px solid #ef4f4f;background-color:transparent;color:#ef4f4f}.mint-button--large{display:block;width:100%}.mint-button--normal,.mint-button--small{display:inline-block;padding:0 12px}.mint-button--small{font-size:14px;height:33px}',""])},3:function(A,exports){A.exports=function(){var A=[];return A.toString=function(){for(var A=[],t=0;t<this.length;t++){var s=this[t];s[2]?A.push("@media "+s[2]+"{"+s[1]+"}"):A.push(s[1])}return A.join("")},A.i=function(t,s){"string"==typeof t&&(t=[[null,t,""]]);for(var e={},n=0;n<this.length;n++){var i=this[n][0];"number"==typeof i&&(e[i]=!0)}for(n=0;n<t.length;n++){var o=t[n];"number"==typeof o[0]&&e[o[0]]||(s&&!o[2]?o[2]=s:s&&(o[2]="("+o[2]+") and ("+s+")"),A.push(o))}},A}},4:function(A,exports,t){function s(A,t){for(var s=0;s<A.length;s++){var e=A[s],n=g[e.id];if(n){n.refs++;for(var i=0;i<n.parts.length;i++)n.parts[i](e.parts[i]);for(;i<e.parts.length;i++)n.parts.push(B(e.parts[i],t))}else{for(var o=[],i=0;i<e.parts.length;i++)o.push(B(e.parts[i],t));g[e.id]={id:e.id,refs:1,parts:o}}}}function e(A){for(var t=[],s={},e=0;e<A.length;e++){var n=A[e],i=n[0],o=n[1],r=n[2],B=n[3],C={css:o,media:r,sourceMap:B};s[i]?s[i].parts.push(C):t.push(s[i]={id:i,parts:[C]})}return t}function n(A,t){var s=c(),e=y[y.length-1];if("top"===A.insertAt)e?e.nextSibling?s.insertBefore(t,e.nextSibling):s.appendChild(t):s.insertBefore(t,s.firstChild),y.push(t);else{if("bottom"!==A.insertAt)throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");s.appendChild(t)}}function i(A){A.parentNode.removeChild(A);var t=y.indexOf(A);t>=0&&y.splice(t,1)}function o(A){var t=document.createElement("style");return t.type="text/css",n(A,t),t}function r(A){var t=document.createElement("link");return t.rel="stylesheet",n(A,t),t}function B(A,t){var s,e,n;if(t.singleton){var B=u++;s=l||(l=o(t)),e=C.bind(null,s,B,!1),n=C.bind(null,s,B,!0)}else A.sourceMap&&"function"==typeof URL&&"function"==typeof URL.createObjectURL&&"function"==typeof URL.revokeObjectURL&&"function"==typeof Blob&&"function"==typeof btoa?(s=r(t),e=w.bind(null,s),n=function(){i(s),s.href&&URL.revokeObjectURL(s.href)}):(s=o(t),e=a.bind(null,s),n=function(){i(s)});return e(A),function(t){if(t){if(t.css===A.css&&t.media===A.media&&t.sourceMap===A.sourceMap)return;e(A=t)}else n()}}function C(A,t,s,e){var n=s?"":e.css;if(A.styleSheet)A.styleSheet.cssText=I(t,n);else{var i=document.createTextNode(n),o=A.childNodes;o[t]&&A.removeChild(o[t]),o.length?A.insertBefore(i,o[t]):A.appendChild(i)}}function a(A,t){var s=t.css,e=t.media;if(e&&A.setAttribute("media",e),A.styleSheet)A.styleSheet.cssText=s;else{for(;A.firstChild;)A.removeChild(A.firstChild);A.appendChild(document.createTextNode(s))}}function w(A,t){var s=t.css,e=t.sourceMap;e&&(s+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(e))))+" */");var n=new Blob([s],{type:"text/css"}),i=A.href;A.href=URL.createObjectURL(n),i&&URL.revokeObjectURL(i)}var g={},Q=function(A){var t;return function(){return"undefined"==typeof t&&(t=A.apply(this,arguments)),t}},E=Q(function(){return/msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase())}),c=Q(function(){return document.head||document.getElementsByTagName("head")[0]}),l=null,u=0,y=[];A.exports=function(A,t){t=t||{},"undefined"==typeof t.singleton&&(t.singleton=E()),"undefined"==typeof t.insertAt&&(t.insertAt="bottom");var n=e(A);return s(n,t),function(A){for(var i=[],o=0;o<n.length;o++){var r=n[o],B=g[r.id];B.refs--,i.push(B)}if(A){var C=e(A);s(C,t)}for(var o=0;o<i.length;o++){var B=i[o];if(0===B.refs){for(var a=0;a<B.parts.length;a++)B.parts[a]();delete g[B.id]}}}};var I=function(){var A=[];return function(t,s){return A[t]=s,A.filter(Boolean).join("\n")}}()},5:function(module,exports,__webpack_require__){module.exports=function(A){function t(e){if(s[e])return s[e].exports;var n=s[e]={i:e,l:!1,exports:{}};return A[e].call(n.exports,n,n.exports,t),n.l=!0,n.exports}var s={};return t.m=A,t.c=s,t.i=function(A){return A},t.d=function(exports,A,t){Object.defineProperty(exports,A,{configurable:!1,enumerable:!0,get:t})},t.n=function(A){var s=A&&A.__esModule?function(){return A.default}:function(){return A};return t.d(s,"a",s),s},t.o=function(A,t){return Object.prototype.hasOwnProperty.call(A,t)},t.p="",t(t.s=209)}({113:function(A,exports){},130:function(A,exports,t){var s,e;t(113),s=t(52);var n=t(184);e=s=s||{},"object"!=typeof s.default&&"function"!=typeof s.default||(e=s=s.default),"function"==typeof e&&(e=e.options),e.render=n.render,e.staticRenderFns=n.staticRenderFns,A.exports=s},15:function(A,exports){A.exports=__webpack_require__(6)},18:function(A,exports,t){"use strict";var s=t(130),e=t.n(s);A.exports=e.a},184:function(module,exports){module.exports={render:function(){with(this)return _h("button",{staticClass:"mint-button",class:["mint-button--"+type,"mint-button--"+size,{"is-disabled":disabled,"is-plain":plain}],attrs:{type:nativeType,disabled:disabled},on:{click:handleClick}},[icon||$slots.icon?_h("span",{staticClass:"mint-button-icon"},[_t("icon",[icon?_h("i",{staticClass:"mintui",class:"mintui-"+icon}):_e()])]):_e()," ",_h("label",{staticClass:"mint-button-text"},[_t("default")])])},staticRenderFns:[]}},209:function(A,exports,t){A.exports=t(18)},52:function(A,exports,t){"use strict";t(15),exports.default={name:"mt-button",methods:{handleClick:function(A){this.$emit("click",A)}},props:{icon:String,disabled:Boolean,nativeType:String,plain:Boolean,type:{type:String,default:"default",validator:function(A){return["default","danger","primary"].indexOf(A)>-1}},size:{type:String,default:"normal",validator:function(A){return["small","normal","large"].indexOf(A)>-1}}}}}})},6:[320,7],7:function(A,exports,t){exports=A.exports=t(3)(),exports.push([A.id,'@font-face{font-family:mintui;src:url(data:application/x-font-ttf;base64,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)}.mintui{font-family:mintui!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}.mintui-search:before{content:"\\E604"}.mintui-more:before{content:"\\E601"}.mintui-back:before{content:"\\E600"}.mintui-field-error:before{content:"\\E605"}.mintui-field-warning:before{content:"\\E608"}.mintui-success:before{content:"\\E602"}.mintui-field-success:before{content:"\\E609"}',""])},320:function(A,exports,t,s){var e=t(s);"string"==typeof e&&(e=[[A.id,e,""]]);t(4)(e,{});e.locals&&(A.exports=e.locals)}});
+webpackJsonp([0],{
+
+/***/ 0:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _vue = __webpack_require__(1);
+	
+	var _vue2 = _interopRequireDefault(_vue);
+	
+	var _store = __webpack_require__(2);
+	
+	var _store2 = _interopRequireDefault(_store);
+	
+	var _vueRouter = __webpack_require__(4);
+	
+	var _vueRouter2 = _interopRequireDefault(_vueRouter);
+	
+	var _solidButton = __webpack_require__(5);
+	
+	var _solidButton2 = _interopRequireDefault(_solidButton);
+	
+	var _pageLoading = __webpack_require__(77);
+	
+	var _pageLoading2 = _interopRequireDefault(_pageLoading);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	__webpack_require__(80);
+	//状态容器
+	
+	//路由
+	
+	_vue2.default.use(_vueRouter2.default);
+	//组件
+	
+	_vue2.default.component('solid-button', _solidButton2.default);
+	
+	_vue2.default.component('page-loading', _pageLoading2.default);
+	var swipe = function swipe(resolve) {
+	    __webpack_require__.e/* nsure */(1, function () {
+	        resolve(__webpack_require__(377));
+	    });
+	};
+	var loadMore = function loadMore(resolve) {
+	    __webpack_require__.e/* nsure */(2, function () {
+	        resolve(__webpack_require__(396));
+	    });
+	};
+	var infinite = function infinite(resolve) {
+	    __webpack_require__.e/* nsure */(3, function () {
+	        resolve(__webpack_require__(406));
+	    });
+	};
+	//定义路由
+	var routes = [{
+	    path: '/swipe',
+	    component: swipe
+	}, {
+	    path: '/loadMore',
+	    component: loadMore
+	}, {
+	    path: '/infinite',
+	    component: infinite
+	}];
+	var router = new _vueRouter2.default({
+	    routes: routes
+	});
+	
+	var app = new _vue2.default({
+	    router: router,
+	    store: _store2.default
+	}).$mount("#view");
+	
+	router.beforeEach(function (to, from, next) {
+	    _store2.default.commit('pageLoading', {
+	        pageLoading: true
+	    });
+	    next();
+	});
+	router.afterEach(function (router) {
+	    _store2.default.commit('pageLoading', {
+	        pageLoading: false
+	    });
+	});
+
+/***/ },
+
+/***/ 2:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _vue = __webpack_require__(1);
+	
+	var _vue2 = _interopRequireDefault(_vue);
+	
+	var _vuex = __webpack_require__(3);
+	
+	var _vuex2 = _interopRequireDefault(_vuex);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	_vue2.default.use(_vuex2.default);
+	exports.default = new _vuex2.default.Store({
+	    state: {
+	        pageLoading: false
+	    },
+	    mutations: {
+	        pageLoading: function pageLoading(state, payload) {
+	            state.pageLoading = payload.pageLoading;
+	        }
+	    },
+	    actions: {},
+	    modules: {}
+	});
+
+/***/ },
+
+/***/ 5:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(6)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(76)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "D:\\code\\php\\htdocs\\vue-comp\\vue-comp\\src\\js\\components\\common\\solid-button.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-622594a0", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-622594a0", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] solid-button.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+
+/***/ 6:
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _zepto = __webpack_require__(7);
+	
+	var _zepto2 = _interopRequireDefault(_zepto);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = {
+	    props: {
+	        text: {
+	            type: String,
+	            required: true
+	        }
+	    },
+	    data: function data() {
+	        return {
+	            dsStyle: {
+	                display: 'none'
+	            }
+	        };
+	    },
+	    mounted: function mounted() {
+	        this.$nextTick(function () {
+	            //按钮hover
+	            $(".btn").on('touchstart', function () {
+	                $(this).addClass('btn-hover');
+	            }).on('touchend', function () {
+	                $(this).removeClass('btn-hover');
+	            });
+	        });
+	    }
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+/***/ },
+
+/***/ 76:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;
+	  return _vm._h('div', {
+	    staticClass: "btn-wrap"
+	  }, [_vm._h('button', {
+	    staticClass: "btn"
+	  }, [_vm._s(_vm.text)]), " ", _vm._h('div', {
+	    staticClass: "btn-loading",
+	    style: (_vm.dsStyle)
+	  }, [_vm._m(0)])])
+	},staticRenderFns: [function (){var _vm=this;
+	  return _vm._h('div', {
+	    staticClass: "spinner"
+	  }, [_vm._h('div', {
+	    staticClass: "spinner-container container1"
+	  }, [_vm._h('div', {
+	    staticClass: "circle1"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle2"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle3"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle4"
+	  })]), " ", _vm._h('div', {
+	    staticClass: "spinner-container container2"
+	  }, [_vm._h('div', {
+	    staticClass: "circle1"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle2"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle3"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle4"
+	  })]), " ", _vm._h('div', {
+	    staticClass: "spinner-container container3"
+	  }, [_vm._h('div', {
+	    staticClass: "circle1"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle2"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle3"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle4"
+	  })])])
+	}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-622594a0", module.exports)
+	  }
+	}
+
+/***/ },
+
+/***/ 77:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_exports__, __vue_options__
+	var __vue_styles__ = {}
+	
+	/* script */
+	__vue_exports__ = __webpack_require__(78)
+	
+	/* template */
+	var __vue_template__ = __webpack_require__(79)
+	__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+	if (
+	  typeof __vue_exports__.default === "object" ||
+	  typeof __vue_exports__.default === "function"
+	) {
+	if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+	__vue_options__ = __vue_exports__ = __vue_exports__.default
+	}
+	if (typeof __vue_options__ === "function") {
+	  __vue_options__ = __vue_options__.options
+	}
+	__vue_options__.__file = "D:\\code\\php\\htdocs\\vue-comp\\vue-comp\\src\\js\\components\\common\\page-loading.vue"
+	__vue_options__.render = __vue_template__.render
+	__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+	
+	/* hot reload */
+	if (false) {(function () {
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  module.hot.accept()
+	  if (!module.hot.data) {
+	    hotAPI.createRecord("data-v-8d0059ec", __vue_options__)
+	  } else {
+	    hotAPI.reload("data-v-8d0059ec", __vue_options__)
+	  }
+	})()}
+	if (__vue_options__.functional) {console.error("[vue-loader] page-loading.vue: functional components are not supported and should be defined in plain js files using render functions.")}
+	
+	module.exports = __vue_exports__
+
+
+/***/ },
+
+/***/ 78:
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	
+	exports.default = {
+	    computed: {
+	        loading: function loading() {
+	            return this.$store.state.pageLoading;
+	        }
+	    }
+	};
+
+/***/ },
+
+/***/ 79:
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports={render:function (){var _vm=this;
+	  return (_vm.loading) ? _vm._h('div', {
+	    staticClass: "page-loading-wrap"
+	  }, [_vm._m(0)]) : _vm._e()
+	},staticRenderFns: [function (){var _vm=this;
+	  return _vm._h('div', {
+	    staticClass: "page-loading"
+	  }, [_vm._h('div', {
+	    staticClass: "spinner"
+	  }, [_vm._h('div', {
+	    staticClass: "spinner-container container1"
+	  }, [_vm._h('div', {
+	    staticClass: "circle1"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle2"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle3"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle4"
+	  })]), " ", _vm._h('div', {
+	    staticClass: "spinner-container container2"
+	  }, [_vm._h('div', {
+	    staticClass: "circle1"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle2"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle3"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle4"
+	  })]), " ", _vm._h('div', {
+	    staticClass: "spinner-container container3"
+	  }, [_vm._h('div', {
+	    staticClass: "circle1"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle2"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle3"
+	  }), " ", _vm._h('div', {
+	    staticClass: "circle4"
+	  })])])])
+	}]}
+	if (false) {
+	  module.hot.accept()
+	  if (module.hot.data) {
+	     require("vue-hot-reload-api").rerender("data-v-8d0059ec", module.exports)
+	  }
+	}
+
+/***/ }
+
+});
+//# sourceMappingURL=app.js.map
