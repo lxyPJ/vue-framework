@@ -29,11 +29,6 @@
 
 <script>
     import Mock from "mockjs";
-    import Vue from "vue";
-    import { Loadmore, Header, Button } from 'mint-ui';
-    Vue.component(Loadmore.name, Loadmore);
-    Vue.component(Header.name, Header);
-    Vue.component(Button.name, Button);
 
     export default{
         data:function(){

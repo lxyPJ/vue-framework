@@ -1,10 +1,14 @@
-require('babel-polyfill');
+require("babel-polyfill");
 import Vue from "vue";
 //状态容器
 import store from "./store";
 //路由
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
+//mint-ui
+import MintUI from 'mint-ui';
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI);
 //组件
 import solidBtn from "./components/common/solid-button.vue";
 Vue.component('solid-button',solidBtn);
@@ -69,3 +73,15 @@ router.afterEach(router => {
         pageLoading:false
     });
 });
+
+/*{
+    presets:['es2015','stage-2'],
+    plugins: [
+        'transform-runtime',
+        ["component",[{
+                "libraryName": "mint-ui",
+                "style": true
+            }]
+        ]
+    ]
+}*/

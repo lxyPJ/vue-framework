@@ -7,8 +7,9 @@
         position: absolute; top:0; left:0;
         width: 100%; height:100%;
     }
-    img[lazy=loading]{
-        background-color:#ccc;
+    image[lazy=loading]{
+        width: 40px; height:100%;
+        margin: auto;
     }
 </style>
 
@@ -31,13 +32,6 @@
 </template>
 
 <script>
-    import Vue from "vue";
-    import { Lazyload, Header, Button, Spinner } from "mint-ui";
-    Vue.use(Lazyload);
-    Vue.component(Header.name, Header);
-    Vue.component(Button.name, Button);
-    Vue.component(Spinner.name, Spinner);
-
     export default {
         data:function(){
             return {

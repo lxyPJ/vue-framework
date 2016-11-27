@@ -33,15 +33,8 @@
 
 <script>
     import Mock from "mockjs";
-    import Vue from "vue";
-    import { InfiniteScroll, Header, Button } from 'mint-ui';
-    Vue.use(InfiniteScroll);
-    Vue.component(Header.name, Header);
-    Vue.component(Button.name, Button);
 
     import infiniteLoading from '../components/common/infinite-loading.vue';
-
-    import zepto from "zepto";
 
     export default{
         components:{
