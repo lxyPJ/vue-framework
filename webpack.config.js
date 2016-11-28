@@ -10,8 +10,7 @@ var config = {
             "vue",
             "vue-router",
             "vuex",
-            "zepto",
-            //"ajaxRequest"
+            "mint-ui"
         ],
         app:"./src/js/app.js"
     },
@@ -34,7 +33,7 @@ var config = {
                 loader:'babel'
             },
             {
-                test: /\.css$/,
+                test: /\.(css)?$/,
                 loader:'style!css'
             },
             {
@@ -48,8 +47,8 @@ var config = {
         extensions : ['','.js','.jsx'],
         alias:{
             'vue$':'vue/dist/vue.js',
-            'zepto':path.join(__dirname, './src/js/vendor/zepto.js'),
-            'ajaxRequest':path.join(__dirname, './src/js/modules/ajaxRequest.js')
+            'ajaxRequest':path.join(__dirname, './src/js/modules/ajaxRequest.js'),
+            'utils':path.join(__dirname, './src/js/modules/utils.js')
         }
     },
     plugins:[
@@ -58,6 +57,14 @@ var config = {
             {
                 from: './src/js/modules/responsive.js',
                 to:'responsive.js'
+            },
+            {
+                from: './src/js/modules/LSresourceLoader.js',
+                to:'LSresourceLoader.js'
+            },
+            {
+                from: './src/js/vendor/zepto.js',
+                to:'zepto.js'
             }
         ]),
         new webpack.optimize.CommonsChunkPlugin({

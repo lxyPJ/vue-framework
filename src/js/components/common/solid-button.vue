@@ -27,8 +27,6 @@
 </template>
 
 <script>
-    import zepto from "zepto";
-
     export default{
         props:{
             text:{

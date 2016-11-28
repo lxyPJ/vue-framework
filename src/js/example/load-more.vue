@@ -18,7 +18,7 @@
             </router-link>
         </mt-header>
         <div class="mt-scroll-body">
-            <mt-loadmore ref="loadmore" :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded">
+            <mt-loadmore ref="loadmore" :auto-fill="false" :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded">
                 <div>
                     <p class="item" v-for="item of items">{{item.name}}</p>
                 </div>
@@ -29,16 +29,12 @@
 
 <script>
     import Mock from "mockjs";
-    import Vue from "vue";
-    import { Loadmore, Header, Button } from 'mint-ui';
-    Vue.component(Loadmore.name, Loadmore);
-    Vue.component(Header.name, Header);
-    Vue.component(Button.name, Button);
 
     export default{
         data:function(){
             return {
                 items:[],
+                groupHeight:205,
                 recordNo:0,
                 allLoaded:false
             }
@@ -84,6 +80,29 @@
                     self.$refs.loadmore.onBottomLoaded(id);
                 },1000);
             }
+        },
+        mounted:function(){
+            var self = this;
+            self.$nextTick(function(){
+                var initNo = Math.ceil($(".mt-scroll-body").height() / self.groupHeight) * 5;
+                function fn(){
+                    if(self.recordNo >= initNo) return;
+                    self.loading = true;
+                    Mock.Random.city(true);
+                    var data = Mock.mock({
+                        "array|5": [
+                            {
+                                "name":'@city'
+                            }
+                        ]
+                    });
+                    self.items = self.items.concat(data.array);
+                    self.recordNo += 5;
+                    self.loading = false;
+                    fn();
+                }
+                fn();
+            });
         }
     }
 </script>

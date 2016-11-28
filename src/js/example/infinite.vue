@@ -33,15 +33,8 @@
 
 <script>
     import Mock from "mockjs";
-    import Vue from "vue";
-    import { InfiniteScroll, Header, Button } from 'mint-ui';
-    Vue.use(InfiniteScroll);
-    Vue.component(Header.name, Header);
-    Vue.component(Button.name, Button);
 
     import infiniteLoading from '../components/common/infinite-loading.vue';
-
-    import zepto from "zepto";
 
     export default{
         components:{
@@ -58,7 +51,6 @@
         methods:{
             loadMore:function(){
                 var self = this;
-                var initNo = Math.ceil($(".mt-scroll-body").height() / self.groupHeight) * 5;
                 self.loading = true;
                 setTimeout(function(){
                     Mock.Random.city(true);
@@ -72,9 +64,6 @@
                     if(self.recordNo < 35){
                         self.items = self.items.concat(data.array);
                         self.recordNo += 5;
-                        if(self.recordNo < initNo){
-                            self.loadMore();
-                        }
                     }
                     self.loading = false;
                 },1000);

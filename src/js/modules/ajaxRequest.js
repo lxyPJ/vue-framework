@@ -1,7 +1,3 @@
-var zepto = require('zepto');
-
-import {baseUrl} from 'constant';
-
 var ajaxRequest = function(options) {
 	options.data.reqTime = new Date().getTime();
 	var contentType;
