@@ -22,12 +22,12 @@ var LSresourceLoader = function(options){
         };
         scriptQueue[self.no] = currentScript;
         //从localstorage中读取脚本
-        var script = self.getScriptFromLS(self.url,self.no,self.ver);
-        if(script !== null){
+        var script = self.getScriptFromLS(self.url);
+        if(script !== null && self.ver !== 'refresh'){
             currentScript.key = self.url;
             currentScript.text = script;
             self.injectScriptsInOrder(self);
-        }else{
+        }else if(script === null || self.ver === 'refresh'){
             var xhr = null;
             try {
                 xhr = new XMLHttpRequest();
@@ -53,37 +53,26 @@ var LSresourceLoader = function(options){
     };
 
     //从localstorage中读取脚本
-    constructor.prototype.getScriptFromLS = function(key,no,ver){
-        var localVersion = localStorage.getItem('cache-js-' + no);
-        var currentVersion = ver;
-        if(window.localStorage && currentVersion == localVersion){
-            if(currentVersion == 'refresh'){
-                localStorage.clear(key);
-                console.log('重新获取 ' + key);
-                return null;
-            }else{
-                return localStorage.getItem(key);
-            }
-        }else if(window.localStorage && currentVersion != localVersion){
-            localStorage.clear(key);
-            console.log('重新获取 ' + key);
+    constructor.prototype.getScriptFromLS = function(key){
+        if(window.localStorage){
+            return localStorage.getItem(key);
+        }else{
             return null;
         }
-    }
+    };
     //将脚本写入localstorage
     constructor.prototype.setScriptToLS = function(key,text,no,ver){
         if(window.localStorage){
             localStorage.setItem(key,text);
             localStorage.setItem('cache-js-' + no,ver);
             console.log(key + ' 被存入LS');
-        } 
-    }
+        }
+    };
     constructor.prototype.injectScriptsInOrder = function(self){
-        var len = self.quantity;
+        var len = scriptQueue.length;
         //按顺序执行队列中的脚本
         for (var i = 0; i < len; i++) {
             var script = scriptQueue[i];
-            if(!script) return;
             //没有执行
             if(!script.done){
                 //没有加载完成
@@ -93,13 +82,13 @@ var LSresourceLoader = function(options){
                     break;
                 }else{//已经加载完成了
                     self.injectScriptTagToDOM(script);
-                    if(i == self.quantity-1){
+                    if(i == quantity-1){
                         console.log('资源准备就绪');
                     }
                 }
             }
         }
-    }
+    };
 
     //将脚本插入dom结构
     constructor.prototype.injectScriptTagToDOM = function(script){
@@ -110,27 +99,24 @@ var LSresourceLoader = function(options){
         script.onload && script.onload();
         script.done = true;
         console.log(script.key + ' 插入了DOM');
-    }
+    };
 
     return new constructor(options);
 };
 
-// localStorage.clear();
+var quantity = 3;
 LSresourceLoader({
     url:'../bundle/zepto.js',
     no:0,
-    quantity:3,
     ver:'201611272346'
 });
 LSresourceLoader({
     url:'../bundle/common.js',
     no:1,
-    quantity:3,
     ver:'201611272346'
 });
 LSresourceLoader({
     url:'../bundle/app.js',
     no:2,
-    quantity:3,
     ver:'refresh'
 });

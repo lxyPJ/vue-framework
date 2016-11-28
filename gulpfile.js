@@ -91,7 +91,7 @@ function watcher() {
 //browserSync
 function server(){
     bs.init({
-        proxy: "192.168.3.5"
+        proxy: "192.168.1.145"
     });
     watcher();
 }
