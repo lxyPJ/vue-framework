@@ -1,7 +1,7 @@
 {
-  "name": "express-mobile",
-  "version": "1.0.0",
-  "description": "",
+  "name": "vue-framework",
+  "version": "2.0.1",
+  "description": "基于vue.js搭建的web前端应用架构",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
