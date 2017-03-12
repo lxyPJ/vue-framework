@@ -6,7 +6,7 @@
     <meta name = "format-detection" content = "telephone=no">
     <title>express-mobile</title>
     <script src="../js/responsive.min.js"></script>
-    <link rel="stylesheet" href="../css/app.min.css">
+    <link rel="stylesheet" href="../css/app.css">
 </head>
 <body>
     <div id="view" class="view">
@@ -17,24 +17,8 @@
             <page-loading></page-loading>
         </div>
     </div>
-    <script src="../js/LSresourceLoader.min.js"></script>
-    <script>
-        var quantity = 3;
-        LSresourceLoader({
-            url:'../js/zepto.min.js',
-            no:0,
-            ver:'2017030001'
-        });
-        LSresourceLoader({
-            url:'../js/common.min.js',
-            no:1,
-            ver:'2017030001'
-        });
-        LSresourceLoader({
-            url:'../js/app.min.js',
-            no:2,
-            ver:'2017030001'
-        });
-    </script>
+    <script type="text/javascript" src="../js/zepto.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/app.js"></script>
 </body>
 </html>

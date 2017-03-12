@@ -70,10 +70,13 @@ var config = {
         extensions : ['','.js'],
         alias:{
             "vue$":"vue/dist/vue.common.js",
-            "constant":path.join(__dirname,"src/store/constant.js"),//常量
+            /* 常量 */
+            "constant":path.join(__dirname,"src/store/constant.js"),
             /* js */
             "tween":path.join(__dirname,"src/js/tween.js"),//缓动动画引擎
-            "slideload":path.join(__dirname,"src/js/slideload.js"),//下拉刷新与无限滚动            
+            "slideload":path.join(__dirname,"src/js/slideload.js"),//下拉刷新与无限滚动    
+            "utils":path.join(__dirname,"src/js/utils.js"),//工具库
+            "validator":path.join(__dirname,"src/js/validator.js"),//表單驗證        
             /* components */
             "solidBtn":path.join(__dirname,"src/components/solid-button/index.vue"),//按钮
             "pageLoading":path.join(__dirname,"src/components/page-loading/index.vue"),//页面loading

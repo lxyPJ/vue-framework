@@ -1,6 +1,6 @@
 import store from "store";
 import { MessageBox } from 'mint-ui';
-import baseUrl from "constant";
+import { baseUrl } from "constant";
 
 var ajaxRequest = function(options) {
 	options.data.reqTime = new Date().getTime();

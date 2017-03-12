@@ -230,7 +230,7 @@ gulp.task('server',function(){
     });
     gulp.watch(src.html,['copyDevHtml']);
     gulp.watch("dist/html/**/*.html").on("change",bs.reload);
-    gulp.watch(["src/css/**/*.scss","src/pages/**/*.scss"], ['style']);
+    gulp.watch([src.css,"src/pages/**/*.scss"], ['style']);
     gulp.watch('dist/js/*.*').on("change",bs.reload);
 });
 

@@ -15,6 +15,7 @@
 
 <script>
     import Vue from "vue";
+    import validator from "validator";
     import { Loadmore } from 'mint-ui';
     Vue.component(Loadmore.name, Loadmore);
     import { Header } from 'mint-ui';
@@ -96,6 +97,7 @@
                 }
                 fn();
             });
+
         }
     }
 </script>
