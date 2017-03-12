@@ -16,11 +16,11 @@ webpackJsonp([0],[
 	
 	var _router2 = _interopRequireDefault(_router);
 	
-	var _solidBtn = __webpack_require__(61);
+	var _solidBtn = __webpack_require__(63);
 	
 	var _solidBtn2 = _interopRequireDefault(_solidBtn);
 	
-	var _pageLoading = __webpack_require__(67);
+	var _pageLoading = __webpack_require__(69);
 	
 	var _pageLoading2 = _interopRequireDefault(_pageLoading);
 	

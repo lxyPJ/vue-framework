@@ -7,11 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "concurrently --kill-others \"gulp dev\" \"gulp webpackWatch\"",
     "build": "gulp build",
-<<<<<<< HEAD
-    "start":"node fileServer.js ./"
-=======
     "start": "node fileServer.js ./"
->>>>>>> 764d1d0fdf8aad5c60ecd5993d018cb8ccb9e1db
   },
   "author": "lxyPJ",
   "license": "ISC",
@@ -47,13 +43,13 @@
     "url-loader": "^0.5.7",
     "vue-loader": "^11.1.4",
     "vue-style-loader": "^2.0.3",
-    "vue-template-compiler": "^2.2.1",
+    "vue-template-compiler": "^2.2.2",
     "webpack": "^1.13.3",
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
-    "mint-ui": "^2.2.0",
-    "vue": "^2.2.1",
+    "mint-ui": "^2.2.1",
+    "vue": "^2.2.2",
     "vue-router": "^2.3.0",
     "vuex": "^2.2.1"
   }
