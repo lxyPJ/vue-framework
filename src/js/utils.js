@@ -233,4 +233,4 @@ utils.quickSort = function(arr){
     return this.quickSort(left).concat([numVal],this.quickSort(right));
 }.bind(utils);
 
-exports = module.exports = utils;
+export default utils;

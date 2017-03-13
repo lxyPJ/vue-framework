@@ -70,4 +70,4 @@ ajaxRequest.options = {
 	complete:null
 };
 
-module.exports = ajaxRequest;
+export default ajaxRequest;

@@ -44,4 +44,4 @@ function validator(datas,callback){
 	return new window._validator(datas,callback);
 };
 
-exports = module.exports = validator;
+export default validator;
