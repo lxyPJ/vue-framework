@@ -14,6 +14,8 @@
      *                          (iOS 10.1.1)UC browser 11.4.7.931 , (iOS 10.1.1)QQ browser 7.2.1.2879 
      */
 
+    import TWEEN from "tween";
+
     var Slideload = function(element,options){
         var self = this;
         self.slider = (typeof element == 'string') ? document.querySelector(element) : element;
