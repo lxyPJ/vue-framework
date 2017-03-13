@@ -4,6 +4,7 @@ var path = require("path");
 var config = {
     entry:{
         common:[
+            "es6-promise",
             /* 核心框架 */
             "vue",
             "vue-router",
@@ -76,7 +77,8 @@ var config = {
             "tween":path.join(__dirname,"src/js/tween.js"),//缓动动画引擎
             "slideload":path.join(__dirname,"src/js/slideload.js"),//下拉刷新与无限滚动    
             "utils":path.join(__dirname,"src/js/utils.js"),//工具库
-            "validator":path.join(__dirname,"src/js/validator.js"),//表單驗證        
+            "validator":path.join(__dirname,"src/js/validator.js"),//表單驗證
+            "animate":path.join(__dirname,"src/js/animate.js"),//动画        
             /* components */
             "solidBtn":path.join(__dirname,"src/components/solid-button/index.vue"),//按钮
             "pageLoading":path.join(__dirname,"src/components/page-loading/index.vue"),//页面loading
