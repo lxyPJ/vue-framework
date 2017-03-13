@@ -3,7 +3,7 @@ import TWEEN from "tween";
 /**
  * @param element {HTMLElement} 目标元素
  */
-function animate(element){
+window._animate = function(element){
     /**
      * 位移动画
      * @param options {Object}
@@ -47,12 +47,14 @@ function animate(element){
         }
 
         this._move(options.duration,options.start,options.end);
+
+        return this;
     };
 
     //初始化
     this.init(element);
 }
-animate.prototype.init = function(element){
+window._animate.prototype.init = function(element){
     this.style = element.style;
 
     //設置transform & transition 浏览器厂商前缀
@@ -103,7 +105,7 @@ animate.prototype.init = function(element){
         };
     }
 };
-animate.prototype.utils = {
+window._animate.prototype.utils = {
     //获取各浏览器对应的css属性的兼容性前缀
     vendor:function (property) {
         var _elementStyle = document.createElement('div').style;
@@ -140,5 +142,9 @@ animate.prototype.utils = {
         return Object.prototype.toString.call(obj) === "[object Object]";
     }
 };
+
+function animate(element){
+    return new window._animate(element);
+}
 
 export default animate;
