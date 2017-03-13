@@ -19,10 +19,10 @@ var path = require('path');
 
 //源文件路径和目标文件路径
 var src = {
-    html:"./src/pages/**/*.html",
-    css:"./src/css/**/*.scss",
-    fonts:"./src/css/base/fonts/{iconfont.eot,iconfont.svg,iconfont.ttf,iconfont.woff}",
-    img:"./src/assets/images/**/*.*"
+    html:"src/pages/**/*.html",
+    css:"src/css/**/*.scss",
+    fonts:"src/css/base/fonts/{iconfont.eot,iconfont.svg,iconfont.ttf,iconfont.woff}",
+    img:"src/assets/images/**/*.*"
 };
 var dest = {
     html:"dist/html",
@@ -226,7 +226,8 @@ gulp.task('webpackPro',function(cb){
 //browserSync
 gulp.task('server',function(){
     bs.init({
-        proxy: "http://localhost:3005"
+        // proxy: "http://localhost:3005"
+        server:"./"
     });
     gulp.watch(src.html,['copyDevHtml']);
     gulp.watch("dist/html/**/*.html").on("change",bs.reload);
