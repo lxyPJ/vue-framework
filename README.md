@@ -27,4 +27,4 @@ gulp webpack babel vue.js MVVM 组件化 模块化
 
 - Model : 数据模型层(与服务端进行交互的数据)
 - View : 用户界面
-- ViewModel : Model与View之间的桥梁,为Model与View提供适配，把Model中的数据转换为可用于展示在View的数据
+- ViewModel : Model与View之间的桥梁,为Model与View提供适配，把服务端提供的数据转换为可用于展示在View的数据，并且梳理与提取相应的数据用于跟服务端进行交互
