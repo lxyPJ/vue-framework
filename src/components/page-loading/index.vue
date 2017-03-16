@@ -27,12 +27,4 @@
     </div>
 </template>
 
-<script>
-    export default{
-        computed:{
-            loading:function(){
-                return this.$store.state.pageLoading;
-            }
-        }
-    }
-</script>
+<script src="./vm.js"></script>
