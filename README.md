@@ -130,11 +130,11 @@ gulp webpack babel vue.js MVVM 组件化 模块化
 *两种模式：开发模式 & 产品模式*
 
 1. js/css代码丑化压缩
-2. 编译ES6的语法或API
+2. 编译ES6的语法或API(Babel)
 3. webpack增量编译
-4. 编译*.scss文件
-5. 图片压缩
-6. 开发过程中，监听文件变化，自动编译，自动刷新浏览器
+4. 编译*.scss文件(gulp-sass & node-sass)
+5. 图片压缩(gulp-imagemin)
+6. 开发过程中，监听文件变化，自动编译，自动刷新浏览器(browser-sync)
 
 
     
