@@ -67,21 +67,21 @@ gulp webpack babel vue.js MVVM 组件化 模块化
 
 **单个组件的目录结构如下：**
 
-componentName/
-&nbsp;&nbsp;&nbsp;&nbsp; index.vue &nbsp;#组件 View 的HTML模板
-&nbsp;&nbsp;&nbsp;&nbsp; style.scss &nbsp;&nbsp;#组件 View 的css样式
-&nbsp;&nbsp;&nbsp;&nbsp; vm.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#组件 ViewModel 的js逻辑
+- componentName/
+   - index.vue #组件 View 的HTML模板
+   - style.scss #组件 View 的css样式
+   - vm.js #组件 ViewModel 的js逻辑
 
 *其中，单个组件的Model数据一般来源于父级组件传递下来的属性*
 *按照组件代码的组成，组件可以分为：HTML、HTML+CSS、JS、HTML+JS、HTML+CSS+JS*
 
 **界面是应用中最大的组件，类似与一个页面，但其实也是一个组件，我们规定由界面这种类型的组件来与服务端做数据交互，因此界面组件的目录结构略有不同：**
 
-viewName/
-&nbsp;&nbsp;&nbsp;&nbsp; index.vue &nbsp;#HTML模板
-&nbsp;&nbsp;&nbsp;&nbsp; style.scss &nbsp;&nbsp;#css样式
-&nbsp;&nbsp;&nbsp;&nbsp; vm.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#ViewModel
-&nbsp;&nbsp;&nbsp;&nbsp; services.js &nbsp;#主要用于与服务端做数据交互
+- viewName/
+   - index.vue #HTML模板
+   - style.scss #css样式
+   - vm.js #ViewModel
+   - services.js #主要用于与服务端做数据交互
 
 ### 项目目录结构规范
 在模块化开发体系和组件化开发规范的基础上，项目目录规范也成型了，如下：
