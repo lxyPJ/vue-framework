@@ -22,7 +22,7 @@ var src = {
     html:"src/pages/**/*.html",
     css:"src/css/**/*.scss",
     fonts:"src/css/base/fonts/{iconfont.eot,iconfont.svg,iconfont.ttf,iconfont.woff}",
-    img:"src/assets/images/**/*.*"
+    img:"assets/images/**/*.*"
 };
 var dest = {
     html:"dist/html",
