@@ -231,4 +231,20 @@ utils.quickSort = function(arr){
     return this.quickSort(left).concat([numVal],this.quickSort(right));
 }.bind(utils);
 
+//冒泡排序
+utils.bubbleSort = function(arr){
+    var len = arr.length,
+        temp;
+    for(let i=0; i<len; i++){
+        for(let j=i+1; j<len; j++){
+            if(arr[i] > arr[j]){
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+};
+
 export default utils;
