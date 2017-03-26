@@ -183,9 +183,7 @@ utils.clone = function(obj){
     }else if(isObject){
         var newObj = {};
         for(var key in obj){
-            if(obj.hasOwnProperty(key)){
-                newObj[key] = obj[key];
-            }
+            newObj[key] = obj[key];
         }
         return newObj;
     }else{
