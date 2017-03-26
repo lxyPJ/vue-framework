@@ -37,12 +37,12 @@ gulp webpack babel vue.js MVVM 组件化 模块化
 > * 分而治之 : 不管你将来是否要复用某段代码，你都有充分的理由将其分治为一个模块。
 > * 代码复用，降低维护成本。
 
-#### JS的模块化(ES6模块系统)
+#### 1. JS的模块化(ES6模块系统)
 
 在ES6之前，JavaScript一直没有模块系统，这对开发大型复杂的前端工程造成了巨大的障碍。
 为此，社区制定了一些模块加载方案，如CommonJS、AMD、CMD等，这些方案中要么实现得不够优雅，要嘛使用起来不是很方便。既然现在ES6已经在语言层面上规定了模块系统，使用起来也很方便，所以JS的模块管理我们选择了ES6的模块系统。
 
-#### CSS的模块化(SASS)
+#### 2. CSS的模块化(SASS)
 
 通过SASS预处理器来实现CSS的文件拆分及模块化
 
@@ -65,23 +65,23 @@ gulp webpack babel vue.js MVVM 组件化 模块化
 4. **页面是组件的容器**，负责组合组件形成功能完整的界面；
 5. 当不需要某个组件，或者想要替换组件时，可以整个目录删除/替换。
 
-**单个组件的目录结构如下：**
+6. **单个组件的目录结构如下：**
 
-componentName/
-&nbsp;&nbsp;&nbsp;&nbsp; index.vue &nbsp;#组件 View 的HTML模板
-&nbsp;&nbsp;&nbsp;&nbsp; style.scss &nbsp;&nbsp;#组件 View 的css样式
-&nbsp;&nbsp;&nbsp;&nbsp; vm.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#组件 ViewModel 的js逻辑
+- componentName/
+   - index.vue #组件 View 的HTML模板
+   - style.scss #组件 View 的css样式
+   - vm.js #组件 ViewModel 的js逻辑
 
 *其中，单个组件的Model数据一般来源于父级组件传递下来的属性*
 *按照组件代码的组成，组件可以分为：HTML、HTML+CSS、JS、HTML+JS、HTML+CSS+JS*
 
-**界面是应用中最大的组件，类似与一个页面，但其实也是一个组件，我们规定由界面这种类型的组件来与服务端做数据交互，因此界面组件的目录结构略有不同：**
+7. **界面是应用中最大的组件，类似与一个页面，但其实也是一个组件，我们规定由界面这种类型的组件来与服务端做数据交互，因此界面组件的目录结构略有不同：**
 
-viewName/
-&nbsp;&nbsp;&nbsp;&nbsp; index.vue &nbsp;#HTML模板
-&nbsp;&nbsp;&nbsp;&nbsp; style.scss &nbsp;&nbsp;#css样式
-&nbsp;&nbsp;&nbsp;&nbsp; vm.js &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#ViewModel
-&nbsp;&nbsp;&nbsp;&nbsp; services.js &nbsp;#主要用于与服务端做数据交互
+- viewName/
+   - index.vue #HTML模板
+   - style.scss #css样式
+   - vm.js #ViewModel
+   - services.js #主要用于与服务端做数据交互
 
 ### 项目目录结构规范
 在模块化开发体系和组件化开发规范的基础上，项目目录规范也成型了，如下：
@@ -130,11 +130,11 @@ viewName/
 *两种模式：开发模式 & 产品模式*
 
 1. js/css代码丑化压缩
-2. 编译ES6的语法或API
+2. 编译ES6的语法或API(Babel)
 3. webpack增量编译
-4. 编译*.scss文件
-5. 图片压缩
-6. 开发过程中，监听文件变化，自动编译，自动刷新浏览器
+4. 编译*.scss文件(gulp-sass & node-sass)
+5. 图片压缩(gulp-imagemin)
+6. 开发过程中，监听文件变化，自动编译，自动刷新浏览器(browser-sync)
 
 
     
