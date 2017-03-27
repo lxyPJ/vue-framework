@@ -231,11 +231,11 @@ utils.quickSort = function(arr){
     return this.quickSort(left).concat([numVal],this.quickSort(right));
 }.bind(utils);
 
-//冒泡排序
-utils.bubbleSort = function(arr){
+//选择排序
+utils.selectionSort = function(arr){
     var len = arr.length,
         temp;
-    for(let i=0; i<len; i++){
+    for(let i=0; i<len-1; i++){
         for(let j=i+1; j<len; j++){
             if(arr[i] > arr[j]){
                 temp = arr[i];
@@ -244,6 +244,39 @@ utils.bubbleSort = function(arr){
             }
         }
     }
+    return arr;
+};
+
+//冒泡排序
+utils.bubbleSort = function(arr){
+    var len = arr.length,
+        temp;
+	for (var i = 0; i < len - 1; i++) {
+		console.log(arr[i]);
+		for (var j = 0; j < len - 1 - i; j++) {
+			if (arr[j] > arr[j + 1]) {
+				temp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = temp;
+			}
+		}
+	}
+    return arr;
+};
+
+//插入排序
+utils.insertionSort = function(arr){
+    for (var i = 0; i < arr.length - 1; i++) {
+		var insert = arr[i + 1];
+		var index = i + 1;
+		var j = i;
+		while(j >= 0 && insert < arr[j]){
+			arr[j + 1] = arr[j];
+			index = j;
+			--j;
+		}
+		arr[index] = insert;
+	}
     return arr;
 };
 
