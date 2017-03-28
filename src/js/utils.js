@@ -212,6 +212,36 @@ utils.cloneDeep = function(obj){
     }
 }.bind(utils);
 
+//数组去重
+utils.uniqueArray = function(arr) {
+    var hashmap = {};
+    var unique = [];
+    for(var i = 0; i < arr.length; i++){
+        if(!hashmap.hasOwnProperty([arr[i]])){
+            hashmap[arr[i]] = 1;
+            unique.push(arr[i]);
+        }
+    }
+    return unique;
+};
+
+//二分搜索
+utils.binarySearch = function(arr, val, start, end){
+    var end = end || arr.length - 1,
+        start = start || 0,
+        m = Math.floor((start + end) / 2);
+    if(arr[m] === val){
+        return m;
+    }
+    if(val < arr[m]){
+        return binarySearch(arr, val, 0, m-1);
+    }else{
+        return binarySearch(arr, val, m+1, end);
+    }
+  
+    return false;
+};
+
 //快速排序
 utils.quickSort = function(arr){
     if(arr.length<=1){
