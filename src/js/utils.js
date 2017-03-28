@@ -232,8 +232,7 @@ utils.binarySearch = function(arr, val, start, end){
         m = Math.floor((start + end) / 2);
     if(arr[m] === val){
         return m;
-    }
-    if(val < arr[m]){
+    }else if(val < arr[m]){
         return binarySearch(arr, val, 0, m-1);
     }else{
         return binarySearch(arr, val, m+1, end);
