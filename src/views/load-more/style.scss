@@ -1,5 +1,7 @@
-.sub-page{
-    overflow: hidden !important;
+.scroll-window{
+    position:absolute; top: 44px; bottom: 0; left: 0; right: 0;
+    overflow-y: auto; overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 .item{
     width: 100%; line-height:40px;

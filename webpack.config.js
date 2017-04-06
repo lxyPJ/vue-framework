@@ -8,12 +8,7 @@ var config = {
             /* 核心框架 */
             "vue",
             "vue-router",
-            "vuex",
-            /* 常量 */
-            "constant",
-            /* 公用組件 */
-            "solidBtn",
-            "pageLoading"
+            "vuex"
         ],
         app:"./src/pages/app/index.js"
     },
@@ -72,7 +67,7 @@ var config = {
         alias:{
             "vue$":"vue/dist/vue.common.js",
             /* 常量 */
-            "constant":path.join(__dirname,"src/store/constant.js"),
+            "constant":path.join(__dirname,"src/store_modules/constant.js"),
             /* js */
             "tween":path.join(__dirname,"src/js/tween.js"),//缓动动画引擎
             "slideload":path.join(__dirname,"src/js/slideload.js"),//下拉刷新与无限滚动    

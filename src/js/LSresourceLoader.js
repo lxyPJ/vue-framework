@@ -11,7 +11,6 @@ var LSresourceLoader = function(options){
         self.no = options.no;
         self.ver = options.ver;
         self.onload = options.onload;
-        self.quantity = options.quantity;
         var currentScript = {
             no:self.no,
             ver:self.ver,
@@ -57,9 +56,8 @@ var LSresourceLoader = function(options){
     constructor.prototype.getScriptFromLS = function(key){
         if(window.localStorage){
             return localStorage.getItem(key);
-        }else{
-            return null;
         }
+        return null;
     };
     //将脚本写入localstorage
     constructor.prototype.setScriptToLS = function(key,text,no,ver){
