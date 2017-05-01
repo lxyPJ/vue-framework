@@ -1,0 +1,32 @@
+[
+  {
+    "name": "ajax",
+    "metas": {
+      "changes": {
+        "v2.1.1-rc.3": {
+          "zh-CN": [
+            "[feature] 支持通过 Vue.http 调用"
+          ],
+          "en": [
+            "[feature] Export http on Vue"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "wechat",
+    "metas": {
+      "changes": {
+        "v2.1.1-rc.3": {
+          "zh-CN": [
+            "[feature] 支持通过 Vue.wechat 调用"
+          ],
+          "en": [
+            "[feature] Export wechat on Vue"
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,25 +1,26 @@
-var gulp = require("gulp");
-var gulpSequence = require('gulp-sequence');
-var gutil = require("gulp-util");
-var del = require("del");
-var rename = require("gulp-rename");
-var uglify = require("gulp-uglify");
-var sass = require("gulp-sass");
-var autoprefixer = require("gulp-autoprefixer");
-var newer = require("gulp-newer");
-var sourcemaps = require('gulp-sourcemaps');
-var imagemin = require('gulp-imagemin');
+//gulp
+var gulp = require("gulp"),
+    gulpSequence = require('gulp-sequence'),
+    gutil = require("gulp-util"),
+    del = require("del"),
+    path = require('path'),
+    rename = require("gulp-rename"),
+    uglify = require("gulp-uglify"),
+    sass = require("gulp-sass"),
+    autoprefixer = require("gulp-autoprefixer"),
+    newer = require("gulp-newer"),
+    sourcemaps = require('gulp-sourcemaps'),
+    imagemin = require('gulp-imagemin');
 //browser-sync
 var bs = require('browser-sync').create();
 //webpack
 var webpack = require("webpack");
-var webpackStream = require("webpack-stream");
-var webpackConfig = require("./webpack.config.js");
-var path = require('path');
+//dev-server
+var express = require("express"),
+    webpackDevMiddleware = require("webpack-dev-middleware");
 
 //源文件路径和目标文件路径
 var src = {
-    html:"src/pages/**/*.html",
     css:"src/css/**/*.scss",
     fonts:"src/css/base/fonts/{iconfont.eot,iconfont.svg,iconfont.ttf,iconfont.woff}",
     img:"assets/images/**/*.*"
@@ -38,31 +39,10 @@ gulp.task('clean',function(cb){
 });
 
 //拷贝
-gulp.task('copyDevHtml',function(){
-    return gulp.src("./src/pages/**/dev.html")
-        .pipe(newer(dest.html))
-        .pipe(rename(function(path){
-            path.basename = path.dirname;
-            path.dirname = "";
-        }))
-        .pipe(gulp.dest(dest.html));
-});
-gulp.task('copyProHtml',function(){
-    return gulp.src("./src/pages/**/index.html")
-        .pipe(newer(dest.html))
-        .pipe(rename(function(path){
-            path.basename = path.dirname;
-            path.dirname = "";
-        }))
-        .pipe(gulp.dest(dest.html));
-});
 gulp.task('copyJs',function(){
     return gulp.src([
-            'src/js/responsive.js',
-            'src/js/LSresourceLoader.js',
-            'src/js/vendor/zepto.js'
+            'src/js/responsive.js'
         ])
-        .pipe(rename({ suffix: '.min' }))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
@@ -125,121 +105,107 @@ gulp.task('proStyle',function(){
             remove:true
         }))
         .pipe(rename(function(path){
-            path.basename = path.dirname + ".min";
+            path.basename = path.dirname;
             path.dirname = "";
         }))
         .pipe(gulp.dest(dest.css));
 });
 
-//webpack development
-gulp.task('webpackWatch',function(){
-    var devConfig = Object.create(webpackConfig);
-    devConfig.output.filename = '[name].js';
-    devConfig.output.chunkFilename = '[id].chunk.js';
-    devConfig.plugins = devConfig.plugins.concat(
-        new webpack.optimize.CommonsChunkPlugin({
-            name:["common"],
-            filename:"[name].js",
-            minChunks: Infinity
-        })
-    );
-    devConfig.devtool = "sourcemap";
-    devConfig.watch = true;
-    return gulp.src('src/pages/app/index.js')
-        .pipe(webpackStream(devConfig,null,function(err,stats){
-            if (err) {
-                throw new gutil.PluginError("webpack:build-dev", err);
-            }
-            gutil.log("[webpack:build-dev]", stats.toString({
-                colors: true
-            }));
-        }))
-        .pipe(gulp.dest('dist/js/'));
-});
+//webpack-dev-server
+gulp.task('webpackDevServer',function(){
+    var webpackDevConfig = require("./webpack.dev.js");
+    var devCompiler = webpack(webpackDevConfig);
+    var server = express();
 
-//webpack bundle
-gulp.task('webpackBundle',function(cb){
-    var bundleConfig = Object.create(webpackConfig);
-    bundleConfig.output.path = path.join(__dirname, './dist/js');
-    bundleConfig.output.filename = '[name].js';
-    bundleConfig.output.chunkFilename = '[id].chunk.js';
-    bundleConfig.plugins = bundleConfig.plugins.concat(
-        new webpack.optimize.CommonsChunkPlugin({
-            name:["common"],
-            filename:"[name].js",
-            minChunks: Infinity
-        })
-    );
-    bundleConfig.devtool = "sourcemap";
+    server.use(webpackDevMiddleware(devCompiler, {
+        publicPath:"/",
+        stats:{
+            chunks: false,
+            colors: true,
+            timings: true,
+            source: true,
+            cachedAssets: false
+        }
+    }));
 
-    var bundleCompiler = webpack(bundleConfig);
-    bundleCompiler.run(function(err, stats) {
+    server.listen(3000,function(err){
+        if(err) throw new gutil.PluginError("webpack-dev-server", err);
+        gutil.log("[webpack-dev-server]","server listening on port 3000!");
+    });
+
+    /*devCompiler.watch({
+        aggregateTimeout: 300,
+        poll: undefined
+    },function(err, stats) {
         if (err) {
-            throw new gutil.PluginError("webpack:build-bundle", err);
+            throw new gutil.PluginError("webpack:development", err);
             return;
         }
-        gutil.log("[webpack:build-bundle]", stats.toString({
-            colors: true
+        gutil.log("[webpack:development]", stats.toString({
+            chunks: false,
+            colors: true,
+            timings: true,
+            source: true,
+            cachedAssets: false
         }));
-        cb();
+    });*/
+});
+
+//webpack development
+gulp.task('webpackDev',function(){
+    var webpackDevConfig = require("./webpack.dev.js");
+    var devCompiler = webpack(webpackDevConfig);
+    devCompiler.watch({
+        aggregateTimeout: 300,
+        poll: undefined
+    },function(err, stats) {
+        if (err) {
+            throw new gutil.PluginError("webpack:development", err);
+            return;
+        }
+        gutil.log("[webpack:development]", stats.toString({
+            chunks: false,
+            colors: true,
+            timings: true,
+            source: true,
+            cachedAssets: false
+        }));
     });
 });
 
 //webpack production
 gulp.task('webpackPro',function(cb){
-    var config = Object.create(webpackConfig);
-    config.output.path = path.join(__dirname, './dist/js');
-    config.output.filename = '[name].min.js';
-    config.output.chunkFilename = '[id].chunk.min.js';
-    config.plugins = config.plugins.concat(
-        new webpack.optimize.CommonsChunkPlugin({
-            name:["common"],
-            filename:"[name].min.js",
-            minChunks: Infinity
-        }),
-        new webpack.DefinePlugin({
-            'process.env': {
-                // "NODE_ENV": JSON.stringify("production")
-                NODE_ENV: '"production"'
-            }
-        }),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            compress:{
-                warnings:false
-            },
-            mangle:{
-                except:['$','exports','require']
-            }
-        })
-    );
-
-    webpack(config, function(err, stats) {
-        if(err) throw new gutil.PluginError("webpack:build", err);
+    var webpackProConfig = require("./webpack.pro.js");
+    webpack(webpackProConfig, function(err, stats) {
+        if(err) throw new gutil.PluginError("webpack:production", err);
         gutil.log("[webpack:production]", stats.toString({
-            colors: true
+            chunks: false,
+            colors: true,
+            timings: true,
+            source: true,
+            cachedAssets: false
         }));
         cb();
     });
 });
 
 //browserSync
-gulp.task('server',function(){
+gulp.task('proxy-server',function(){
     bs.init({
-        // proxy: "http://localhost:3005"
-        server:"./"
+        proxy: "http://localhost:3005"
+        // server:"./"
     });
-    gulp.watch(src.html,['copyDevHtml']);
     gulp.watch("dist/html/**/*.html").on("change",bs.reload);
     gulp.watch([src.css,"src/pages/**/*.scss"], ['style']);
     gulp.watch('dist/js/*.*').on("change",bs.reload);
 });
 
 gulp.task('buildSuccess',function(cb){
-    console.log('build success');
+    gutil.log("[webpack:production]","build success!");
     cb();
 });
 
-gulp.task('build',gulpSequence('clean',['copyProHtml','copyJs','copyFonts','copyImg','proStyle'],'webpackPro','buildSuccess'));
+gulp.task('build',gulpSequence('clean',['copyJs','copyFonts','copyImg','proStyle'],'webpackPro','buildSuccess'));
 
-gulp.task("dev",gulpSequence('clean',['copyDevHtml','copyJs','copyFonts','copyImg','style'],'webpackBundle','server'));
+gulp.task("dev-proxy",gulpSequence('clean',['copyJs','copyFonts','copyImg','style'],'webpackDev','proxy-server'));
+gulp.task("dev-server",gulpSequence('clean',['copyJs','copyFonts','copyImg','style'],'webpackDevServer'));

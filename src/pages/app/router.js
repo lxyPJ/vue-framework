@@ -4,19 +4,34 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 if(window.location.hash == ''){
-    window.location.hash = '/loadMore';
+    window.location.hash = '/load-more-1';
 }
-//异步组件
-const loadMore = resolve => {
-    require.ensure([],() => {
-        resolve(require("loadMore"));
-    });
-};
+
 //定义路由
 const routes = [
     {
-        path:'/loadMore',
-        component:loadMore
+        path:'/load-more-1',
+        component:resolve => {
+            require.ensure([],() => {
+                resolve(require("../../views/load-more-1/index.vue"));
+            },"load-more-1");
+        }
+    },
+    {
+        path:'/load-more-2',
+        component:resolve => {
+            require.ensure([],() => {
+                resolve(require("../../views/load-more-2/index.vue"));
+            },"load-more-2");
+        }
+    },
+    {
+        path:'/load-more-3',
+        component:resolve => {
+            require.ensure([],() => {
+                resolve(require("../../views/load-more-3/index.vue"));
+            },"load-more-3");
+        }
     }
 ];
 const router = new VueRouter({
@@ -34,4 +49,4 @@ router.afterEach(router => {
     });
 });
 
-exports = module.exports = router;
+export default router;

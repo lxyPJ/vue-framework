@@ -7,8 +7,6 @@ import solidBtn from "solidBtn";
 Vue.component('solid-button',solidBtn);
 import pageLoading from "pageLoading";
 Vue.component('page-loading',pageLoading);
-import { Header } from 'mint-ui';
-Vue.component(Header.name, Header);
 
 //根实例
 const app = new Vue({
