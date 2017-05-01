@@ -132,23 +132,6 @@ gulp.task('webpackDevServer',function(){
         if(err) throw new gutil.PluginError("webpack-dev-server", err);
         gutil.log("[webpack-dev-server]","server listening on port 3000!");
     });
-
-    /*devCompiler.watch({
-        aggregateTimeout: 300,
-        poll: undefined
-    },function(err, stats) {
-        if (err) {
-            throw new gutil.PluginError("webpack:development", err);
-            return;
-        }
-        gutil.log("[webpack:development]", stats.toString({
-            chunks: false,
-            colors: true,
-            timings: true,
-            source: true,
-            cachedAssets: false
-        }));
-    });*/
 });
 
 //webpack development
