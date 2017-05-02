@@ -3,11 +3,10 @@ var baseConfig = require("./webpack.base.js"),
     webpack = require("webpack"),
     HtmlWebpackPlugin = require("html-webpack-plugin");
 
-// devConfig.output
 devConfig.plugins = devConfig.plugins.concat([
     new webpack.optimize.CommonsChunkPlugin({
         name:["vendor"],
-        filename:"js/[name].[hash].js",
+        filename:"js/[name].js",
         minChunks: Infinity
     }),
     new webpack.DefinePlugin({
@@ -23,6 +22,6 @@ devConfig.plugins = devConfig.plugins.concat([
         chunksSortMode:"dependency"
     }),
 ]);
-devConfig.devtool = "eval";
+devConfig.devtool = "#cheap-module-eval-source-map";
 
 module.exports = devConfig;

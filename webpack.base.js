@@ -1,5 +1,7 @@
 var webpack = require("webpack"),
-    path = require("path");
+    path = require("path"),
+    copyWebpackPlugin = require("copy-webpack-plugin"),
+    ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
 
 var config = {
     entry:{
@@ -15,8 +17,8 @@ var config = {
     },
     output : {
         path:path.resolve(__dirname, './dist'),
-        filename:'js/[name].[hash].js',
-        chunkFilename:'js/[name].[hash].js',
+        filename:'js/[name].js',
+        chunkFilename:'js/[name].js',
         publicPath : "../"
     },
     module:{
@@ -34,6 +36,14 @@ var config = {
             {
                 test: /\.(css)?$/,
                 loader:'style-loader!css-loader'
+            },
+            {
+                test:/\.scss$/,
+                use:ExtractTextWebpackPlugin.extract({
+                    fallback: 'style-loader',
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                    use: ['css-loader','resolve-url-loader','sass-loader']
+                })
             },
             {
                 test:/\.vue$/,
@@ -82,6 +92,12 @@ var config = {
         }
     },
     plugins:[
+        new copyWebpackPlugin([
+            { from:'src/js/responsive.js',to:'js/responsive.js'}
+        ]),
+        new ExtractTextWebpackPlugin({
+            filename:"css/app.css"
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name:"app",
             async:"mock",
