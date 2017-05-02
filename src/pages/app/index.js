@@ -3,6 +3,7 @@ import store from "./store/index.js";
 import router from "./router.js";
 
 import "./index.scss";
+import "@css/base/fonts/iconfont.css";
 
 //pages公用组件
 import solidBtn from "solidBtn";

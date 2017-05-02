@@ -41,8 +41,7 @@ var config = {
                 test:/\.scss$/,
                 use:ExtractTextWebpackPlugin.extract({
                     fallback: 'style-loader',
-                    //resolve-url-loader may be chained before sass-loader if necessary
-                    use: ['css-loader','resolve-url-loader','sass-loader']
+                    use: ['css-loader','postcss-loader','sass-loader','resolve-url-loader']
                 })
             },
             {
@@ -77,6 +76,7 @@ var config = {
         extensions : ['.js'],
         alias:{
             "vue$":"vue/dist/vue.common.js",
+            "@css":path.resolve(__dirname,"src/css/"),
             /* 常量 */
             "constant":path.resolve(__dirname,"src/store_modules/constant.js"),
             /* js */
@@ -93,10 +93,31 @@ var config = {
     },
     plugins:[
         new copyWebpackPlugin([
-            { from:'src/js/responsive.js',to:'js/responsive.js'}
+            {from:'src/js/responsive.js',to:'js/responsive.js'}
         ]),
         new ExtractTextWebpackPlugin({
-            filename:"css/app.css"
+            filename:"css/app.[chunkhash].css"
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options:{
+                postcss:function(){
+                    return [require('autoprefixer')({
+                        browsers:[
+                            "last 3 versions","iOS 7","not ie <= 9",
+                            "Android >= 4.0",
+                            "last 3 and_chr versions",
+                            "last 3 and_ff versions",
+                            "last 3 op_mob versions",
+                            "last 3 op_mob versions",
+                            "last 3 op_mini versions"
+                        ],
+                        //是否美化属性值
+                        cascade:true,
+                        //是否去掉不必要的前缀
+                        remove:true
+                    })];
+                }
+            }
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name:"app",
