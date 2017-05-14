@@ -97,7 +97,6 @@ gulp.task('webpackDev',function(){
     },function(err, stats) {
         if (err) {
             throw new gutil.PluginError("webpack:development", err);
-            return;
         }
         gutil.log("[webpack:development]", stats.toString({
             chunks: false,

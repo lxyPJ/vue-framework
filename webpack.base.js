@@ -1,7 +1,9 @@
 var webpack = require("webpack"),
     path = require("path"),
     copyWebpackPlugin = require("copy-webpack-plugin"),
-    ExtractTextWebpackPlugin = require("extract-text-webpack-plugin");
+    ExtractTextWebpackPlugin = require("extract-text-webpack-plugin"),
+    vuxLoader = require('vux-loader'),
+    prevue = require('./prevue.config.js');
 
 var config = {
     entry:{
@@ -25,17 +27,15 @@ var config = {
         rules:[
             {
                 test:/\.(gif|png|jpg|woff|woff2|eot|ttf|svg)(\?t=\d+)?$/,
-                exclude:/node_modules/,
                 loader : "url-loader?limit=10000"
-            },
-            {
-                test: /\.(js)?$/,
-                exclude:/node_modules/,
-                loader:'babel-loader'
             },
             {
                 test: /\.(css)?$/,
                 loader:'style-loader!css-loader'
+            },
+            {
+                test: /\.(less)?$/,
+                use:['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
             },
             {
                 test:/\.scss$/,
@@ -45,35 +45,46 @@ var config = {
                 })
             },
             {
-                test:/\.vue$/,
+                test: /\.(js)?$/,
                 exclude:/node_modules/,
-                loader:'vue-loader',
-                options:{
-                    loaders:{
-                        js:'babel-loader',
-                        scss:'vue-style-loader!style-loader!css-loader!sass-loader'
+                use: ['babel-loader']
+            },
+            {
+                test:/\.vue$/,
+                use: [
+                    {
+                        loader: 'vux-loader'
                     },
-                    postcss:[require('autoprefixer')({
-                        browsers:[
-                            "last 3 versions","iOS 7","not ie <= 9",
-                            "Android >= 4.0",
-                            "last 3 and_chr versions",
-                            "last 3 and_ff versions",
-                            "last 3 op_mob versions",
-                            "last 3 op_mob versions",
-                            "last 3 op_mini versions"
-                        ],
-                        //是否美化属性值
-                        cascade:true,
-                        //是否去掉不必要的前缀
-                        remove:true
-                    })]
-                }
+                    {
+                        loader:'vue-loader',
+                        options:{
+                            loaders:{
+                                js:'babel-loader',
+                                scss:'vue-style-loader!style-loader!css-loader!sass-loader'
+                            },
+                            postcss:[require('autoprefixer')({
+                                browsers:[
+                                    "last 3 versions","iOS 7","not ie <= 9",
+                                    "Android >= 4.0",
+                                    "last 3 and_chr versions",
+                                    "last 3 and_ff versions",
+                                    "last 3 op_mob versions",
+                                    "last 3 op_mob versions",
+                                    "last 3 op_mini versions"
+                                ],
+                                //是否美化属性值
+                                cascade:true,
+                                //是否去掉不必要的前缀
+                                remove:true
+                            })]
+                        }
+                    }
+                ]
             }
         ]
     },
     resolve : {
-        extensions : ['.js'],
+        extensions : ['.js', '.vue', '.json'],
         alias:{
             "vue$":"vue/dist/vue.common.js",
             "@css":path.resolve(__dirname,"src/css/"),
@@ -128,4 +139,16 @@ var config = {
         })
     ]
 };
-exports = module.exports = config;
+
+var finalConfig = vuxLoader.merge(config, {
+    plugins: [
+        {
+            name: 'vux-ui'
+        }
+    ]
+});
+var vuxBabel = finalConfig.module.rules.pop();
+finalConfig.module.rules.pop();
+finalConfig.module.rules.push(vuxBabel);
+
+exports = module.exports = finalConfig;
